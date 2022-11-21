@@ -1,4 +1,4 @@
-# DeathCoders
+# :skull: DeathCoders :skull:
 
 ## :pencil: Descripción
 
