@@ -23,6 +23,7 @@
         border-radius: 3rem;
     }
 
+
 // Etiquetas
 
 body {
@@ -50,12 +51,19 @@ h1{
 }
 
 .img-flecha{
-    display: flex;
-    justify-content: center;
+    grid-column: 2 / 4;
+    text-align: center;
     height: 7rem;
 }
 
 .contenedor{
     display: grid;
-    justify-content: center;
+    grid-template-columns: 25% 25% 25% 25%;
 }
+
+.cont-centro{
+    grid-column: 2 / 4;
+    text-align: center;
+}
+
+
