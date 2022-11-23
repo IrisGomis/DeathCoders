@@ -10,16 +10,42 @@ body {
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  height: 100vh;
+h1 {
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .logo {
   width: 40%;
 }
 
-h1 {
-  text-align: center;
-}/*# sourceMappingURL=view2.css.map */
+/*div .slider { 
+    overflow: hidden;
+    background-image: url(../recursos/img/background/estanque-sin-fondo.png);
+    width: 40%;
+}
+
+div .slider figure img { 
+    width: 20%;
+}
+
+div .slider figure { 
+    position: relative;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    animation: 30s slidy infinite; 
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+*//*# sourceMappingURL=view2.css.map */
