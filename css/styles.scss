@@ -1,12 +1,24 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
 }
 
 // Mixins
 
+    @mixin texto ($pad, $mar, $size) {
+        padding: $pad;
+        margin: $mar;
+        font-size: $size;
+    }
 
+    @mixin boton {
+        color: white;
+        background-color: #3F1C3F;
+        border-radius: 3rem;
+    }
 
 // Etiquetas
 
@@ -19,3 +31,9 @@ body {
 h1{
     color: #3F1C3F;
 }
+
+.btn-basico {
+    @include texto(2%, 2%, 24px);
+    @include boton;
+}
+
