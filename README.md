@@ -6,7 +6,13 @@
 ## :heavy_check_mark: Tecnologías
 - HTML
 - CSS
+- SASS
+- Bootstrap
 - JavaScript
-- SASS (...)
 
 ## :hammer: Setup
+Clonar el repositorio de GitHub
+```
+https://github.com/IrisGomis/DeathCoders.git
+```
+
