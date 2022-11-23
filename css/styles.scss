@@ -1,8 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+
+                      
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+// Mixins
+
+
+
+// Etiquetas
 
 body {
     width: 100vw;
@@ -11,5 +20,25 @@ body {
 }
 
 h1{
-    color: #3F1C3F;
+    color: #ffffff;
+    font-family: 'M41_LOVEBIT', sans-serif;
+    text-align: center;
+                                                
+}
+
+.img-logo{
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+}
+
+.img-flecha{
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+}
+
+.contenedor{
+    display: grid;
+    justify-content: center;
 }
