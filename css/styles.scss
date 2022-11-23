@@ -18,6 +18,7 @@
     }
 
     @mixin boton {
+        position: relative;
         color: white;
         background-color: #3F1C3F;
         border-radius: 3rem;
@@ -37,10 +38,39 @@ h1{
     text-align: center;
                                                 
 }
+button {
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 6px;
+    }
+    a:hover  {
+        color: #3F1C3F;
+    }
+}
+// ID
+
+// Clases
+
+// Botones
 
 .btn-basico {
-    @include texto(2%, 2%, 24px);
+    @include texto(2%, 2%, 30px);
     @include boton;
+}
+.btn-basico:hover {
+
+}
+.btn-neon {
+    overflow: hidden;
+    transition: 0.4s;
+}
+.btn-neon:hover {
+    border: none;
+    color: #3F1C3F;
+    background-color:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+    0 0 80px #a945c7;
 }
 
 .img-logo{
