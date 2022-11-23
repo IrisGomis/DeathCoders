@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/m41-lovebit");
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,9 @@ body {
 }
 
 h1 {
-  color: #3F1C3F;
+  color: #ffffff;
+  font-family: "M41_LOVEBIT", sans-serif;
+  text-align: center;
 }
 
 .btn-basico {
@@ -23,4 +26,21 @@ h1 {
   color: white;
   background-color: #3F1C3F;
   border-radius: 3rem;
+}
+
+.img-logo {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+}
+
+.img-flecha {
+  display: flex;
+  justify-content: center;
+  height: 7rem;
+}
+
+.contenedor {
+  display: grid;
+  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */
