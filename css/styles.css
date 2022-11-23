@@ -1,1 +1,15 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
+}
+
+h1 {
+  color: #3F1C3F;
+}/*# sourceMappingURL=styles.css.map */
