@@ -11,10 +11,18 @@ body {
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
 }
 
+main {
+  text-align: center;
+}
+
 h1 {
   color: #ffffff;
   font-family: "M41_LOVEBIT", sans-serif;
   text-align: center;
+}
+
+h3 {
+  margin-top: 20%;
 }
 
 button a {
@@ -33,23 +41,14 @@ button a:hover {
 }
 
 .img-flecha {
-  grid-column: 2/4;
-  text-align: center;
   height: 7rem;
 }
 
-.contenedor {
+.btn-flecha {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-
-.cont-centro {
-  grid-column: 2/4;
-  text-align: center;
-}
-
-.cont-centro a {
-  color: #ffffff;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .footer {
@@ -85,11 +84,14 @@ button a:hover {
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
 }
 
+.btn-flex {
+  display: inline-block;
+}
+
 .btn-12 {
   font-size: 2rem;
   color: #ffffff;
   padding: 5px;
-  position: relative;
   right: 20px;
   bottom: 20px;
   border: none;
@@ -110,8 +112,7 @@ button a:hover {
   height: 40px;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  margin: 0;
-  text-align: center;
+  margin: 3% 0 3% 42%;
   box-sizing: border-box;
   transition: all 0.3s;
 }
