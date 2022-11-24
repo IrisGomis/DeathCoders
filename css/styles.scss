@@ -4,8 +4,6 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
     box-sizing: border-box;
 }
 
@@ -74,28 +72,6 @@ button {
 
 // Clases
 
-// Botones
-
-.btn-basico {
-    @include texto(2%, 2%, 30px);
-    @include boton;
-}
-
-.btn-basico:hover {
-
-}
-.btn-neon {
-    overflow: hidden;
-    transition: 0.4s;
-}
-.btn-neon:hover {
-    border: none;
-    color: #3F1C3F;
-    background-color:#a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-    0 0 80px #a945c7;
-}
-
 .img-logo{
     display: flex;
     justify-content: center;
@@ -108,14 +84,20 @@ button {
     height: 7rem;
 }
 
-.contenedor{
+.contenedor {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+
 .cont-centro{
-    grid-column: 2 / 4;
+    grid-column: 2/4;
     text-align: center;
+
+}
+
+.cont-centro a {
+    color: #ffffff;
 }
 
 .footer{
@@ -128,15 +110,12 @@ button {
     text-align: center;
 }
 // Botones
-
 .btn-basico {
+    cursor: pointer;
     @include texto(2%, 2%, 30px);
     @include boton;
 }
 
-.btn-basico:hover {
-
-}
 .btn-neon {
     overflow: hidden;
     transition: 0.4s;
@@ -149,6 +128,80 @@ button {
     0 0 80px #a945c7;
 }
 
+.btn-12{
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 5px;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  background-color: transparent; //Desaparece el blanco pero aparece el texto abajo.
+}
+.btn-12 span {
+  background: #3F1C3F;
+  background: linear-gradient(0deg, #3F1C3F 0%, #a945c7 100%);
+  display: block;
+  position: absolute;
+  width: 210px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 6px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
 
 .title-animation{
     margin-left: 27%;
@@ -159,6 +212,79 @@ button {
     to{ width: 63%;}
 }
 
+@media screen and (max-width:520px){
+
+    .title-animation{
+        margin-left: 5%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 100%;}
+    }
+
+}
+
+@media only screen and (min-width:520px) and (max-width:720px){
+
+    .title-animation{
+        margin-left: 15%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 92%;}
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:820px){
+
+   
+    .title-animation{
+        margin-left: 25%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 80%;}
+    }
+}
+
+@media only screen and (min-width:820px) and (max-width:992px){
+
+    .title-animation{
+        margin-left: 25%;
+    }
+
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 80%;}
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1024){
+
+    .title-animation{
+        margin-left: 25%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 73%;}
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    .title-animation{
+        margin-left: 27%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 63%;}
+    }
+}
 
 @media screen and (min-width:1200px){
 
@@ -172,5 +298,21 @@ button {
     }
 }
 
+//Evento boton instrucciones con js
 
+#q1{
+    background-color: #765F9C;
+    color: #ffffff;
+    border: 1px solid #101016;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 15rem;
+    text-align: justify;
+    padding: 5px 5px;
+    text-decoration: none;
+    margin-top: 40%;
+}
 
+#q1 p{
+    line-height: 80% ;
+}
