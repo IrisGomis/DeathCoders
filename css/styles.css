@@ -29,6 +29,8 @@ button a:hover {
 }
 
 .btn-basico {
+  text-align: center;
+  text-decoration: none;
   padding: 2%;
   margin: 2%;
   font-size: 30px;
@@ -39,12 +41,14 @@ button a:hover {
 }
 
 .btn-neon {
-  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 6px;
   transition: 0.4s;
 }
 
 .btn-neon:hover {
   border: none;
+  font-weight: 800;
   color: #3F1C3F;
   background-color: #a945c7;
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
