@@ -52,29 +52,6 @@ button {
 // ID
 
 // Clases
-
-// Botones
-
-.btn-basico {
-    @include texto(2%, 2%, 30px);
-    @include boton;
-}
-
-.btn-basico:hover {
-
-}
-.btn-neon {
-    overflow: hidden;
-    transition: 0.4s;
-}
-.btn-neon:hover {
-    border: none;
-    color: #3F1C3F;
-    background-color:#a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-    0 0 80px #a945c7;
-}
-
 .img-logo{
     display: flex;
     justify-content: center;
@@ -106,6 +83,29 @@ button {
     color: white;
     text-align: center;
 }
+// Botones
+
+.btn-basico {
+    @include texto(2%, 2%, 30px);
+    @include boton;
+}
+
+.btn-basico:hover {
+
+}
+.btn-neon {
+    overflow: hidden;
+    transition: 0.4s;
+}
+.btn-neon:hover {
+    border: none;
+    color: #3F1C3F;
+    background-color:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+    0 0 80px #a945c7;
+}
+
+
 
 
 
