@@ -13,11 +13,55 @@ body {
 }
 
 h1 {
-  text-align: center;
   color: #ffffff;
   font-family: "M41_LOVEBIT", sans-serif;
 }
 
+.title-animation {
+  margin-left: 5%;
+}
+
+.typed-out {
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
 .img-logo {
   display: flex;
   justify-content: center;
@@ -116,7 +160,7 @@ h1 {
   border-radius: 3rem;
   display: flex;
   margin: auto;
-  margin-top: 30%;
+  margin-top: 17%;
 }
 
 .btn-neon {
@@ -150,6 +194,25 @@ footer {
   .btn-basico {
     margin-top: 15%;
   }
+  .title-animation {
+    margin-left: 25%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
+  }
 }
 @media screen and (min-width: 820px) {
   .slider-container {
@@ -166,6 +229,22 @@ footer {
     padding: 2% 3%;
     font-size: 30px;
   }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
 }
 @media screen and (min-width: 992px) {
   .slider-container {
@@ -179,6 +258,25 @@ footer {
   }
   .btn-basico {
     margin-top: 5%;
+  }
+  .title-animation {
+    margin-left: 25%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
   }
 }
 @media screen and (min-width: 1024px) {
@@ -196,6 +294,25 @@ footer {
     padding: 1% 2%;
     font-size: 20px;
   }
+  .title-animation {
+    margin-left: 27%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 63%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 63%;
+    }
+  }
 }
 @media screen and (min-width: 1200px) {
   .slider-container {
@@ -211,5 +328,24 @@ footer {
     margin-top: 2%;
     padding: 1% 2%;
     font-size: 20px;
+  }
+  .title-animation {
+    margin-left: 32%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 58%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 58%;
+    }
   }
 }/*# sourceMappingURL=view2.css.map */

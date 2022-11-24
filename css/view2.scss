@@ -31,10 +31,32 @@ body {
 }
 
 h1{
-    text-align: center;
     color: #ffffff;
     font-family: 'M41_LOVEBIT', sans-serif;
-}                
+}  
+
+.title-animation{
+    margin-left: 5%;
+}
+
+.typed-out{
+    overflow: hidden;
+    border-right: 2px solid #ffffff;
+    width: 0;
+    animation: typing 3s steps(14) forwards,
+               blink .8s infinite;
+}
+
+@keyframes typing {
+    from{width: 0}
+    to{ width: 97%;}
+}
+
+@keyframes blink {
+    from{ border-color: #ffffff}
+    to{ border-color: transparent}
+}
+
 
 
 .img-logo{
@@ -90,7 +112,7 @@ h1{
     @include boton;
     display: flex;
     margin: auto;
-    margin-top: 30%;
+    margin-top: 17%;
 }
 
 .btn-neon {
@@ -129,6 +151,15 @@ footer{
         margin-top: 15%;
     }
 
+    .title-animation{
+        margin-left: 25%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 73%;}
+    }
+
 }
 
 @media screen and (min-width:820px){
@@ -149,6 +180,11 @@ footer{
         padding: 2% 3%;
         font-size: 30px;
     }
+
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 70%;}
+    }
 }
 
 @media screen and (min-width:992px){
@@ -166,6 +202,15 @@ footer{
 
     .btn-basico {
         margin-top: 5%;
+    }
+
+    .title-animation{
+        margin-left: 25%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 73%;}
     }
 }
 
@@ -187,6 +232,15 @@ footer{
         padding: 1% 2%;
         font-size: 20px;
     }
+
+    .title-animation{
+        margin-left: 27%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 63%;}
+    }
 }
 
 @media screen and (min-width:1200px){
@@ -206,5 +260,14 @@ footer{
         margin-top: 2%;
         padding: 1% 2%;
         font-size: 20px;
+    }
+
+    .title-animation{
+        margin-left: 32%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 58%;}
     }
 }
