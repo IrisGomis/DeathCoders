@@ -1,0 +1,210 @@
+@import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+// Mixins
+    @mixin texto ($pad, $mar, $size) {
+        padding: $pad;
+        margin: $mar;
+        font-size: $size;
+    }
+
+    @mixin boton {
+        position: relative;
+        color: white;
+        background-color: #3F1C3F;
+        border-radius: 3rem;
+    }
+
+
+//Etiquetas
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'M41_LOVEBIT', sans-serif;
+}                
+
+
+.img-logo{
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+}
+
+.slider-container {
+    width: 87%;
+    height: 23%;
+    background-image: url(../recursos/img/background/estanque-sin-fondo.png);
+    background-size: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30%;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slider 10s linear infinite alternate;
+    list-style: none;
+    align-items: center;
+}
+
+.slider img{
+    height: 8rem;
+    margin-top: 35%;
+}
+
+.slider li {
+    width: 100%;
+}
+
+@keyframes slider {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+.btn-basico {
+    @include texto(3%, 1%, px);
+    @include boton;
+    display: flex;
+    margin: auto;
+    margin-top: 30%;
+}
+
+.btn-neon {
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.btn-neon:hover {
+    border: none;
+    color: #3F1C3F;
+    background-color:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+    0 0 80px #a945c7;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+@media screen and (min-width:768px){
+
+    .slider-container {
+        width: 80%;
+        height: 35%;
+        margin-top: 20%;
+    }
+    
+    .slider img{
+        height: 10rem;
+        margin-top: 35%;    
+    }
+    
+    .btn-basico {
+        margin-top: 15%;
+    }
+
+}
+
+@media screen and (min-width:820px){
+
+    .slider-container {
+        width: 88%;
+        height: 35%;
+        margin-top: 15%;
+    }
+    
+    .slider img{
+        height: 10rem;
+        margin-top: 35%;
+    }
+
+    .btn-basico {
+        margin-top: 15%;
+        padding: 2% 3%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width:992px){
+
+    .slider-container {
+        width: 85%;
+        height: 50%;
+        margin-top: 5%;
+    }
+    
+    .slider img{
+        height: 10rem;
+        margin-top: 35%;
+    }
+
+    .btn-basico {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    .slider-container {
+        width: 50%;
+        height: 45%;
+        margin-top: 0.5%;
+    }
+    
+    .slider img{
+        height: 8rem;
+        margin-top: 35%;
+    }
+
+    .btn-basico {
+        margin-top: 2%;
+        padding: 1% 2%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    .slider-container {
+        width: 48%;
+        height: 55%;
+        margin-top: 0.5%;
+    }
+    
+    .slider img{
+        height: 10rem;
+        margin-top: 35%;
+    }
+
+    .btn-basico {
+        margin-top: 2%;
+        padding: 1% 2%;
+        font-size: 20px;
+    }
+}

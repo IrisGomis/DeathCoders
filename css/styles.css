@@ -61,12 +61,27 @@ button a:hover {
 }
 
 .img-flecha {
-  display: flex;
-  justify-content: center;
+  grid-column: 2/4;
+  text-align: center;
   height: 7rem;
 }
 
 .contenedor {
   display: grid;
-  justify-content: center;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.cont-centro {
+  grid-column: 2/4;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
