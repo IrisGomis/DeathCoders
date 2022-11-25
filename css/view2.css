@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 body {
@@ -13,11 +12,55 @@ body {
 }
 
 h1 {
-  text-align: center;
   color: #ffffff;
   font-family: "M41_LOVEBIT", sans-serif;
 }
 
+.title-animation {
+  margin-left: 5%;
+}
+
+.typed-out {
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
 .img-logo {
   display: flex;
   justify-content: center;
@@ -26,12 +69,12 @@ h1 {
 
 .slider-container {
   width: 87%;
-  height: 23%;
+  height: 24%;
   background-image: url(../recursos/img/background/estanque-sin-fondo.png);
   background-size: 100%;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: 30%;
+  margin-top: 2%;
 }
 
 .slider {
@@ -106,17 +149,29 @@ h1 {
     margin-left: -300%;
   }
 }
+.btn-reinicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 6px;
+}
+button a:hover {
+  color: #3F1C3F;
+}
+
 .btn-basico {
-  padding: 3%;
-  margin: 1%;
-  font-size: px;
+  padding: 2%;
+  margin: 2%;
+  font-size: 30px;
   position: relative;
   color: white;
   background-color: #3F1C3F;
   border-radius: 3rem;
-  display: flex;
-  margin: auto;
-  margin-top: 30%;
 }
 
 .btn-neon {
@@ -131,6 +186,36 @@ h1 {
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
 }
 
+.img-flecha-2 {
+  height: 3rem;
+  margin-left: 5%;
+  -webkit-animation: blink-2 0.5s infinite;
+          animation: blink-2 0.5s infinite;
+}
+
+@-webkit-keyframes blink-2 {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-2 {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 .footer {
   position: absolute;
   bottom: 0;
@@ -141,7 +226,82 @@ h1 {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 520px) {
+  .slider-container {
+    width: 85%;
+    height: 25%;
+    margin-top: 15%;
+  }
+  .slider img {
+    height: 5rem;
+    margin-top: 35%;
+  }
+  .btn-basico {
+    margin-top: 10%;
+  }
+  .title-animation {
+    margin-left: 5%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .img-flecha-2 {
+    height: 5rem;
+    margin-left: 10%;
+    margin-top: 15%;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 720px) {
+  .slider-container {
+    width: 80%;
+    height: 20%;
+    margin-top: 10%;
+  }
+  .slider img {
+    height: 8rem;
+    margin-top: 35%;
+  }
+  .btn-basico {
+    margin-top: 10%;
+  }
+  .title-animation {
+    margin-left: 15%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 92%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 92%;
+    }
+  }
+  .img-flecha-2 {
+    height: 5rem;
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) {
   .slider-container {
     width: 80%;
     height: 35%;
@@ -154,8 +314,34 @@ h1 {
   .btn-basico {
     margin-top: 15%;
   }
+  .title-animation {
+    margin-left: 25%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  .img-flecha-2 {
+    height: 5rem;
+    margin-left: 10%;
+  }
 }
-@media screen and (min-width: 820px) {
+@media only screen and (min-width: 820px) and (max-width: 992px) {
+  .title-animation {
+    margin-left: 25%;
+  }
   .slider-container {
     width: 88%;
     height: 35%;
@@ -170,8 +356,28 @@ h1 {
     padding: 2% 3%;
     font-size: 30px;
   }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  .img-flecha-2 {
+    height: 7rem;
+    margin-left: 7%;
+  }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1024) {
   .slider-container {
     width: 85%;
     height: 50%;
@@ -183,6 +389,25 @@ h1 {
   }
   .btn-basico {
     margin-top: 5%;
+  }
+  .title-animation {
+    margin-left: 25%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 73%;
+    }
   }
 }
 @media screen and (min-width: 1024px) {
@@ -200,6 +425,30 @@ h1 {
     padding: 1% 2%;
     font-size: 20px;
   }
+  .title-animation {
+    margin-left: 27%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 63%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 63%;
+    }
+  }
+  .img-flecha-2 {
+    height: 5rem;
+    margin-left: 24%;
+    margin-top: -4%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .slider-container {
@@ -215,5 +464,28 @@ h1 {
     margin-top: 2%;
     padding: 1% 2%;
     font-size: 20px;
+  }
+  .title-animation {
+    margin-left: 32%;
+  }
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 48%;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 48%;
+    }
+  }
+  .img-flecha-2 {
+    height: 7rem;
+    margin-left: 25%;
   }
 }/*# sourceMappingURL=view2.css.map */
