@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
-
+@import url('https://fonts.cdnfonts.com/css/roseamp');
+  
+                
                       
 *{
     margin: 0;
@@ -72,6 +74,8 @@ button {
 .cont-centro{
     grid-column: 2 / 4;
     text-align: center;
+    color: #ffffff; 
+    font-family: 'Roseamp', sans-serif;                                               
 }
 
 .footer{
