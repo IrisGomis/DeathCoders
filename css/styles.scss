@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+@import url('https://fonts.cdnfonts.com/css/roseamp');
 
+                
                       
 *{
     margin: 0;
@@ -30,11 +32,20 @@ body {
     height: 100vh;
     background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
 }
+main {
+    text-align: center;
+}
 
 h1{
     color: #ffffff;
     font-family: 'M41_LOVEBIT', sans-serif;
+    text-align: center;
 }  
+
+.contenedor{
+    font-family: 'Roseamp', sans-serif;
+    color: #ffffff;
+}
 
 .title-animation{
     margin-left: 5%;
@@ -58,6 +69,10 @@ h1{
     to{ border-color: transparent}
 }
 
+h3{
+    margin-top: 20%;
+}
+
 button {
     a {
         color: #ffffff;
@@ -79,25 +94,14 @@ button {
 }
 
 .img-flecha{
-    grid-column: 2 / 4;
-    text-align: center;
     height: 7rem;
 }
 
-.contenedor {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-}
-
-
-.cont-centro{
-    grid-column: 2/4;
-    text-align: center;
-
-}
-
-.cont-centro a {
-    color: #ffffff;
+.btn-flecha {
+   display: grid;
+   grid-template-rows: repeat(3, 1fr);
+   justify-items: center;
+   align-items: center;
 }
 
 .footer{
@@ -127,12 +131,15 @@ button {
     box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
     0 0 80px #a945c7;
 }
+.btn-flex {
+    display: inline-block;
+}
 
+// Botón instrucciones giratorio
 .btn-12{
   font-size: 2rem;
   color: #ffffff;
   padding: 5px;
-  position: relative;
   right: 20px;
   bottom: 20px;
   border:none;
@@ -156,8 +163,7 @@ button {
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   border-radius: 6px;
-  margin:0;
-  text-align: center;
+  margin: 3% 0 3% 42%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
