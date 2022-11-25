@@ -8,7 +8,6 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
 }
 
@@ -349,6 +348,9 @@ button a:hover {
       width: 50%;
     }
   }
+  .btn-12 {
+    margin-left: -12%;
+  }
 }
 #q1 {
   background-color: #765F9C;
@@ -360,9 +362,13 @@ button a:hover {
   text-align: justify;
   padding: 5px 5px;
   text-decoration: none;
-  margin-top: 40%;
+  margin-top: 45%;
 }
 
 #q1 p {
   line-height: 80%;
+}
+
+.titulo-3 {
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
