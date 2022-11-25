@@ -466,14 +466,14 @@ button a:hover {
     font-size: 20px;
   }
   .title-animation {
-    margin-left: 32%;
+    margin-left: 35%;
   }
   @-webkit-keyframes typing {
     from {
       width: 0;
     }
     to {
-      width: 48%;
+      width: 50%;
     }
   }
   @keyframes typing {
@@ -481,7 +481,7 @@ button a:hover {
       width: 0;
     }
     to {
-      width: 48%;
+      width: 50%;
     }
   }
   .img-flecha-2 {
