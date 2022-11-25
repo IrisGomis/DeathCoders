@@ -1,8 +1,31 @@
+@import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+
+                      
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
 }
+
+// Mixins
+
+    @mixin texto ($pad, $mar, $size) {
+        padding: $pad;
+        margin: $mar;
+        font-size: $size;
+    }
+
+    @mixin boton {
+        position: relative;
+        color: white;
+        background-color: #3F1C3F;
+        border-radius: 3rem;
+    }
+
+
+// Etiquetas
 
 body {
     width: 100vw;
@@ -11,11 +34,120 @@ body {
 }
 
 h1{
-    color: #3F1C3F;
+    color: #ffffff;
+    font-family: 'M41_LOVEBIT', sans-serif;
+    text-align: center;
+                                                
+}
+button {
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 6px;
+    }
+    a:hover  {
+        color: #3F1C3F;
+    }
+}
+// ID
+
+// Clases
+
+// Botones
+
+.btn-basico {
+    @include texto(2%, 2%, 30px);
+    @include boton;
 }
 
+.btn-basico:hover {
 
+}
+.btn-neon {
+    overflow: hidden;
+    transition: 0.4s;
+}
+.btn-neon:hover {
+    border: none;
+    color: #3F1C3F;
+    background-color:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+    0 0 80px #a945c7;
+}
 
+.img-logo{
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    animation: rotation 5s infinite linear ;
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+            
+    
+}
+/*.dos {
+    width: 100px;
+    height: 100px;
+    transition: all 3s;
+    padding: 50px;
+    background-color: #a945c7;
+}*/
+.animation-fill-mode 
+.img-flecha{
+    grid-column: 2 / 4;
+    text-align: center;
+    height: 7rem;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.cont-centro{
+    grid-column: 2 / 4;
+    text-align: center;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+// Botones
+
+.btn-basico {
+    @include texto(2%, 2%, 30px);
+    @include boton;
+}
+
+.btn-basico:hover {
+
+}
+.btn-neon {
+    overflow: hidden;
+    transition: 0.4s;
+}
+.btn-neon:hover {
+    border: none;
+    color: #3F1C3F;
+    background-color:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+    0 0 80px #a945c7;
+}
 
 
 

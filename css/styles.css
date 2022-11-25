@@ -1,6 +1,9 @@
+@import url("https://fonts.cdnfonts.com/css/m41-lovebit");
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -11,5 +14,117 @@ body {
 }
 
 h1 {
+  color: #ffffff;
+  font-family: "M41_LOVEBIT", sans-serif;
+  text-align: center;
+}
+
+button a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 6px;
+}
+button a:hover {
   color: #3F1C3F;
+}
+
+.btn-basico {
+  padding: 2%;
+  margin: 2%;
+  font-size: 30px;
+  position: relative;
+  color: white;
+  background-color: #3F1C3F;
+  border-radius: 3rem;
+}
+
+.btn-neon {
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.btn-neon:hover {
+  border: none;
+  color: #3F1C3F;
+  background-color: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.img-logo {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+  -webkit-animation: rotation 5s infinite linear;
+          animation: rotation 5s infinite linear;
+}
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+/*.dos {
+    width: 100px;
+    height: 100px;
+    transition: all 3s;
+    padding: 50px;
+    background-color: #a945c7;
+}*/
+.animation-fill-mode .img-flecha {
+  grid-column: 2/4;
+  text-align: center;
+  height: 7rem;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.cont-centro {
+  grid-column: 2/4;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+
+.btn-basico {
+  padding: 2%;
+  margin: 2%;
+  font-size: 30px;
+  position: relative;
+  color: white;
+  background-color: #3F1C3F;
+  border-radius: 3rem;
+}
+
+.btn-neon {
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.btn-neon:hover {
+  border: none;
+  color: #3F1C3F;
+  background-color: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
 }/*# sourceMappingURL=styles.css.map */
