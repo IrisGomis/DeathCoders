@@ -84,20 +84,21 @@ button a:hover {
 }
 
 #q1 {
-  background-color: #765F9C;
+  background-color: rgba(76, 95, 109, 0.985);
   color: #ffffff;
-  border: 1px solid #101016;
+  border: 2px solid #a945c7;
   border-radius: 10px;
-  font-size: 12px;
-  width: 15rem;
+  font-size: 10px;
+  width: 11rem;
   text-align: justify;
   padding: 5px 5px;
   text-decoration: none;
   margin-top: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #q1 p {
-  line-height: 80%;
+  line-height: 0.8rem;
 }
 
 .img-logo {
@@ -388,6 +389,10 @@ button a:hover {
   .btn-instrucciones {
     margin-left: -7%;
   }
+  #q1 {
+    font-size: 12px;
+    width: 15rem;
+  }
 }
 .list {
   margin-top: -10%;
@@ -399,28 +404,61 @@ button a:hover {
 }
 
 .btn-add {
-  background-color: #D9D9D9;
-  border: 1px solid #3F1C3F;
-  border-radius: 5px;
-  color: #3F1C3F;
-  font-size: 15px;
-  padding: 3% 3%;
-  margin-top: 5%;
-  transform: translate(10%);
+  background-color: rgba(76, 95, 109, 0.8);
+  border: 2px solid #a945c7;
+  padding: 5px;
+  width: 100px;
+  margin-top: 10%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  position: relative;
 }
 
 .btn-remove {
-  background-color: #D9D9D9;
-  border: 1px solid #3F1C3F;
-  border-radius: 5px;
-  color: #3F1C3F;
-  font-size: 15px;
-  padding: 3% 3%;
-  margin-top: 5%;
-  transform: translate(10%);
+  background-color: rgba(76, 95, 109, 0.8);
+  border: 2px solid #a945c7;
+  padding: 5px;
+  width: 100px;
+  margin-top: 10%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  position: relative;
+}
+
+.effet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-bottom: 1px solid #a945c7;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s;
+  opacity: 1;
+  transform: translate(37%, -2%) rotate(180deg);
+}
+
+.effet:hover::before {
+  opacity: 0;
+  transform: translate(0, 0);
 }
 
 .subtitle-game {
   margin-top: 25%;
   margin-bottom: 10%;
+}
+
+ul li.checked {
+  list-style: none;
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+ul li {
+  list-style: none;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
