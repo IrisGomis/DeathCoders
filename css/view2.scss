@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -104,13 +104,87 @@ h1{
     100% {margin-left: -300%;}
 }
 
-.btn-reinicio{
+// Popup
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #a760acbd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+    
+    
+}
+.modal__container {
+    margin: auto;
+    width: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    background-color: #fff;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.modal__title {
+    font-size: 28px;
+}
+.modal_parrafo {
+    margin-bottom:10px ;
+}
+.modal__img {
+    width: 90%;
+    max-width: 300px;
+}
+
+.modal__close {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(22, 92, 92);
+    padding: 1em 3em;
+    border:  1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .5s;
+}
+
+.modal__close:hover {
+    color: rgb(22, 92, 92) ;
+    background-color: #fff;
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+
+//-----------------------------------------------
+.btn-reinicio {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 button {
+    
     a {
         color: #ffffff;
         text-decoration: none;
@@ -376,12 +450,12 @@ button {
     }
 
     .title-animation{
-        margin-left: 32%;
+        margin-left: 35%;
     }
     
     @keyframes typing {
         from{width: 0}
-        to{ width: 48%;}
+        to{ width: 50%;}
     }
 
     .img-flecha-2{
