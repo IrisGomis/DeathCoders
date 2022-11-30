@@ -1,12 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 @import url('https://fonts.cdnfonts.com/css/roseamp');
-
-                
-                      
+                   
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Mixins
@@ -15,6 +13,7 @@
         padding: $pad;
         margin: $mar;
         font-size: $size;
+        font-family:'Roseamp', sans-serif;
     }
 
     @mixin boton {
@@ -22,130 +21,177 @@
         color: white;
         background-color: #3F1C3F;
         border-radius: 2rem;
+        font-family: 'Roseamp', sans-serif;
+    }
+
+    @mixin boton-add-remove {
+        background-color: rgba(76, 95, 109,.8);
+        border:2px solid #a945c7;
+        padding:5px;  
+        width:100px;   
+        margin-top: 10%;
+        text-align:center;  
+        color: rgba(255,255,255,1);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        position: relative;
     }
 
 
 // Etiquetas
 
-body{
+body {
     background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
     position: relative;
     padding-bottom: 3em;
+    height: 100vh;
 }
 
-main{
-    text-align: center;
+main {
+  text-align: center;
 }
 
-h1{
-    color: #ffffff;
-    font-family: 'M41_LOVEBIT', sans-serif;
-    text-align: center;
+h1 {
+  color: #ffffff;
+  font-family: 'M41_LOVEBIT', sans-serif;
+  text-align: center;
 }  
 
-.contenedor{
+.contenedor, .contenedor-2 {
+    justify-content: center;
     font-family: 'Roseamp', sans-serif;
     color: #ffffff;
 }
 
-.title-animation{
-    margin-left: 5%;
+.typed-out {
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  animation: typing 3s steps(14) forwards,
+              blink .8s infinite;
 }
 
-.typed-out{
-    overflow: hidden;
-    border-right: 2px solid #ffffff;
-    width: 0;
-    animation: typing 3s steps(14) forwards,
-               blink .8s infinite;
+@keyframes typing {
+  from{width: 0}
+  to{ width: 97%;}
 }
 
-@keyframes typing{
-    from{width: 0}
-    to{ width: 97%;}
+@keyframes blink {
+  from{ border-color: #ffffff}
+  to{ border-color: transparent}
 }
 
-@keyframes blink{
-    from{ border-color: #ffffff}
-    to{ border-color: transparent}
-}
-
-h3{
-    margin-top: 20%;
+h3 {
+  margin-top: 20%;
 }
 
 button {
-    a {
-        color: #ffffff;
-        text-decoration: none;
-        letter-spacing: 6px;
-    }
-    a:hover  {
-        color: #3F1C3F;
-    }
+  a {
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 6px;
+  }
+  a:hover  {
+      color: #3F1C3F;
+  }
 }
+
 // ID
+
+#q1 {
+    background-color:rgba(76, 95, 109, 0.985);
+    color: #ffffff;
+    border: 2px solid #a945c7;
+    border-radius: 10px;
+    font-size: 10px;
+    width: 11rem;
+    text-align: justify;
+    padding: 5px 5px;
+    text-decoration: none;
+    margin-top: 3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#q1 p {
+    line-height: 0.8rem ;
+}
 
 // Clases
 
-.img-logo{
-    display: flex;
-    justify-content: center;
-    height: 10rem;
+.img-logo {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
 }
 
-.img-flecha{
-    height: 7rem;
+.logo-animado {
+    animation: zoom-in 2s ease-out infinite;
 }
 
-.btn-flecha{
-   display: grid;
-   grid-template-rows: repeat(3, 1fr);
-   justify-items: center;
-   align-items: center;
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+.img-flecha {
+  height: 7rem;
+}
+
+.contenedor-2 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .footer{
-    position: absolute;
-    width: 100vw;
-    background-color: #000;
-    color: white;
-    text-align: center;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+  color: white;
+  text-align: center;
 }
+
 // Botones
-.btn-basico{
+.btn-basico {
     cursor: pointer;
-    @include texto(2%, 2%, 30px);
+    @include texto(2% 8%, 2%, 20px);
     @include boton;
 }
 
-.btn-neon{
-    overflow: hidden;
-    transition: 0.4s;
+.btn-neon {
+  overflow: hidden;
+  transition: 0.4s;
 }
-.btn-neon:hover{
-    border: none;
-    color: #3F1C3F;
-    background-color:#a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-    0 0 80px #a945c7;
-}
-.btn-flex{
-    display: inline-block;
+
+.btn-neon:hover {
+  border: none;
+  color: #3F1C3F;
+  background-color:#a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
+  0 0 80px #a945c7;
 }
 
 // Botón instrucciones giratorio
-.btn-12{
-    font-size: 2rem;
+.btn-instrucciones {
+    margin-left: -12%;
+    font-size: 1rem;
     color: #ffffff;
-    padding: 5px;
-    right: 20px;
-    bottom: 20px;
     border:none;
     box-shadow: none;
-    width: 130px;
-    height: 40px;
+    width: 10px;
+    height: 30px;
     cursor: pointer;
     line-height: 42px;
     -webkit-perspective: 230px;
@@ -153,25 +199,25 @@ button {
     background-color: transparent; //Desaparece el blanco pero aparece el texto abajo.
 }
 
-.btn-12 span {
+.btn-instrucciones span {
     background: #3F1C3F;
     background: linear-gradient(0deg, #3F1C3F 0%, #a945c7 100%);
     display: block;
     position: absolute;
-    width: 210px;
+    width: 125px;
     height: 40px;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
     border-radius: 6px;
-    margin: 3% 0 3% 42%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all .3s;
     transition: all .3s;
 }
-.btn-12 span:nth-child(1) {
+
+.btn-instrucciones span:nth-child(1) {
   box-shadow:
     -7px -7px 20px 0px #fff9,
     -4px -4px 5px 0px #fff9,
@@ -184,7 +230,8 @@ button {
     -moz-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
-.btn-12 span:nth-child(2) {
+
+.btn-instrucciones span:nth-child(2) {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
@@ -192,7 +239,8 @@ button {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
-.btn-12:hover span:nth-child(1) {
+
+.btn-instrucciones:hover span:nth-child(1) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -200,7 +248,8 @@ button {
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
-.btn-12:hover span:nth-child(2) {
+
+.btn-instrucciones:hover span:nth-child(2) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -210,32 +259,88 @@ button {
   transform: rotateX(-90deg);
 }
 
-.title-animation{
-    margin-left: 27%;
+//lista
+
+.list {
+    margin-top: -10%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #EEBAF9;
+    border: 1px solid #ffffff;
 }
 
-@keyframes typing {
-    from{width: 0}
-    to{ width: 63%;}
+.btn-add {
+    @include boton-add-remove;  
 }
 
-@media screen and (max-width:520px){
+.btn-remove {
+    @include boton-add-remove;
+}
 
-    .title-animation{
+.effet::before {
+    content: '';
+    position: absolute;
+    top: 0; left:-35px;
+    width: 100%;  height: 100%; z-index: 1;
+    border-bottom:1px solid #a945c7;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.5s;
+    opacity: 1;
+    transform: translate(37%,-2%) rotate(180deg);      
+}
+
+.effet:hover::before { 
+    opacity: 0; transform: translate(0,0); 
+}
+
+.subtitle-game {
+  margin-top: 25%;
+  margin-bottom: 10%;
+}
+
+#q1 p {
+  line-height: 0.8rem;
+}
+
+ul li.checked {
+  list-style: none;
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.titulo-3 {
+  color: #ffffff;
+}
+
+//@media
+
+@media screen and (max-width:520px) {
+
+    .title-animation {
         margin-left: 5%;
     }
     
     @keyframes typing {
         from{width: 0}
-        to{ width: 100%;}
+        to{ width: 98%;}
+    }
+
+    .btn-basico {
+        font-size: 1rem;
     }
 
 }
 
-@media only screen and (min-width:520px) and (max-width:720px){
+@media only screen and (min-width:521px) and (max-width:720px) {
 
-    .title-animation{
-        margin-left: 15%;
+    .title-animation {
+        margin-left: 18%;
     }
     
     @keyframes typing {
@@ -244,59 +349,59 @@ button {
     }
 }
 
-@media only screen and (min-width:768px) and (max-width:820px){
+@media only screen and (min-width:721px) and (max-width:820px) {
 
    
-    .title-animation{
-        margin-left: 25%;
+    .title-animation {
+        margin-left: 23%;
     }
     
     @keyframes typing {
         from{width: 0}
-        to{ width: 80%;}
+        to{ width: 72%;}
     }
 }
 
-@media only screen and (min-width:820px) and (max-width:992px){
+@media only screen and (min-width:821px) and (max-width:992px) {
 
-    .title-animation{
-        margin-left: 25%;
-    }
+  .title-animation {
+      margin-left: 25%;
+  }
 
     @keyframes typing {
         from{width: 0}
-        to{ width: 80%;}
+        to{ width: 69%;}
     }
 }
 
-@media only screen and (min-width:992px) and (max-width:1024){
+@media only screen and (min-width:993px) and (max-width:1024) {
 
-    .title-animation{
-        margin-left: 25%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 73%;}
-    }
+  .title-animation {
+      margin-left: 25%;
+  }
+  
+  @keyframes typing {
+      from{width: 0}
+      to{ width: 73%;}
+  }
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1025px) {
 
-    .title-animation{
-        margin-left: 27%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 63%;}
-    }
+  .title-animation {
+      margin-left: 27%;
+  }
+  
+  @keyframes typing {
+      from{width: 0}
+      to{ width: 63%;}
+  }
 }
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1200px) {
 
-    .title-animation{
-        margin-left: 35%;
+    .title-animation {
+        margin-left: 34%;
     }
     
     @keyframes typing {
@@ -304,30 +409,13 @@ button {
         to{ width: 50%;}
     }
 
-    .btn-12{
-        margin-left: -12%;
+    .btn-instrucciones {
+        margin-left: -7%;
+    }
+
+    #q1 {
+        font-size: 12px;
+        width: 15rem;
     }
 }
 
-//Evento boton instrucciones con js
-
-#q1{
-    background-color: #765F9C;
-    color: #ffffff;
-    border: 1px solid #101016;
-    border-radius: 10px;
-    font-size: 12px;
-    width: 15rem;
-    text-align: justify;
-    padding: 5px 5px;
-    text-decoration: none;
-    margin-top: 45%;
-}
-
-#q1 p{
-    line-height: 80% ;
-}
-
-.titulo-3{
-    color: #ffffff;
-}
