@@ -486,7 +486,9 @@ ul li {
 }
 
 .btn-audio-play, .btn-audio-stop {
-  background-color: #242C56;
+  background-color: transparent;
+  border: transparent;
+  margin: 5px;
 }
 
 iframe {
