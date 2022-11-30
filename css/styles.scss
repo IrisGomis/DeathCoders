@@ -100,6 +100,14 @@ button {
 
 // ID
 
+#musica {
+   display: none; 
+}
+
+.boton_logo {
+  background-color: transparent;
+}
+
 #q1 {
     background-color:rgba(76, 95, 109, 0.985);
     color: #ffffff;
@@ -127,7 +135,8 @@ button {
 }
 
 .logo-animado {
-    animation: zoom-in 2s ease-out infinite;
+  height: 10rem;
+  animation: zoom-in 2s ease-out infinite;
 }
 
 @keyframes zoom-in {
