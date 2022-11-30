@@ -413,3 +413,35 @@ ul li{
     width: 15rem;
   }
 }
+
+.swal-modal {
+  background-color:rgb(142, 153, 160);
+  border: 1px solid #ffffff;
+  
+}
+
+.swal-overlay {
+  background-color: #3f1c3fc2;
+}
+
+.swal-text {
+  color: #ffffff;
+}
+
+.swal-button {
+  background-color: #3F1C3F;
+}
+
+.btn-audio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btn-audio-play, .btn-audio-stop {
+  background-color: #242C56;
+}
+
+iframe{
+  display: none;
+}
