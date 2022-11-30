@@ -3,6 +3,21 @@ function toggle(q1) {
     if (obj.style.display == "block") obj.style.display = "none";
     else obj.style.display = "block";
 }
+//Audio
+
+let boton = document.querySelector(".boton_logo");
+
+boton.addEventListener("click", () => {
+    let etiquetaAudio = document.createElement("audio")
+    etiquetaAudio.setAttribute("src", "../recursos/audio/suspense.mp3")
+    etiquetaAudio.play()
+})
+
+window.onload=function() {
+    document.getElementById("autoplay").play();
+}
+
+// Lista de nombres 
 
 let nameCoders = arrayCoders();
 

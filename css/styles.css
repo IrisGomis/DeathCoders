@@ -79,6 +79,15 @@ button a:hover {
   color: #3F1C3F;
 }
 
+#musica {
+  display: none;
+}
+
+.boton_logo {
+  background-color: transparent;
+  border: transparent;
+}
+
 #q1 {
   background-color: rgba(76, 95, 109, 0.985);
   color: #ffffff;
@@ -104,6 +113,7 @@ button a:hover {
 }
 
 .logo-animado {
+  height: 10rem;
   -webkit-animation: zoom-in 2s ease-out infinite;
           animation: zoom-in 2s ease-out infinite;
 }

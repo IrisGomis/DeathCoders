@@ -292,7 +292,7 @@ h1 {
 .btn-reinicio {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-content: flex-end;
 }
 
 button a {
