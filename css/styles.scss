@@ -1,8 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 @import url('https://fonts.cdnfonts.com/css/roseamp');
-
-                
-                      
+                                    
 *{
     margin: 0;
     padding: 0;
@@ -44,7 +42,7 @@
 
 // Etiquetas
 
-body{
+body {
     background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
     position: relative;
     padding-bottom: 3em;
@@ -55,23 +53,19 @@ main {
     text-align: center;
 }
 
-h1{
+h1 {
     color: #ffffff;
     font-family: 'M41_LOVEBIT', sans-serif;
     text-align: center;
 }  
 
-.contenedor, .contenedor-2{
+.contenedor, .contenedor-2 {
     justify-content: center;
     font-family: 'Roseamp', sans-serif;
     color: #ffffff;
 }
 
-.title-animation{
-    margin-left: 5%;
-}
-
-.typed-out{
+.typed-out {
     overflow: hidden;
     border-right: 2px solid #ffffff;
     width: 0;
@@ -79,12 +73,12 @@ h1{
                blink .8s infinite;
 }
 
-@keyframes typing{
+@keyframes typing {
     from{width: 0}
     to{ width: 97%;}
 }
 
-@keyframes blink{
+@keyframes blink {
     from{ border-color: #ffffff}
     to{ border-color: transparent}
 }
@@ -102,7 +96,7 @@ button {
 
 // ID
 
-#q1{
+#q1 {
     background-color:rgba(76, 95, 109, 0.985);
     color: #ffffff;
     border: 2px solid #a945c7;
@@ -116,19 +110,17 @@ button {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-#q1 p{
+#q1 p {
     line-height: 0.8rem ;
 }
 
-// Clases
-
-.img-logo{
+.img-logo {
     display: flex;
     justify-content: center;
     height: 10rem;
 }
 
-.logo-animado{
+.logo-animado {
     animation: zoom-in 2s ease-out infinite;
 }
 
@@ -144,7 +136,7 @@ button {
   }
 }
 
-.img-flecha{
+.img-flecha {
     height: 7rem;
 }
 
@@ -155,7 +147,7 @@ button {
    align-items: center;
 }
 
-.footer{
+.footer {
     position: absolute;
     width: 100vw;
     background-color: #000;
@@ -164,17 +156,18 @@ button {
     bottom: 0;
 }
 // Botones
-.btn-basico{
+.btn-basico {
     cursor: pointer;
     @include texto(2% 8%, 2%, 20px);
     @include boton;
 }
 
-.btn-neon{
+.btn-neon {
     overflow: hidden;
     transition: 0.4s;
 }
-.btn-neon:hover{
+
+.btn-neon:hover {
     border: none;
     color: #3F1C3F;
     background-color:#a945c7;
@@ -183,13 +176,10 @@ button {
 }
 
 // Botón instrucciones giratorio
-.btn-instrucciones{
+.btn-instrucciones {
     margin-left: -12%;
     font-size: 1rem;
     color: #ffffff;
-    //padding: 5px 5px;
-   // right: 20px;
-   // bottom: 20px;
     border:none;
     box-shadow: none;
     width: 10px;
@@ -198,7 +188,7 @@ button {
     line-height: 42px;
     -webkit-perspective: 230px;
     perspective: 230px;
-    background-color: transparent; //Desaparece el blanco pero aparece el texto abajo.
+    background-color: transparent;
 }
 
 .btn-instrucciones span {
@@ -218,6 +208,7 @@ button {
     -webkit-transition: all .3s;
     transition: all .3s;
 }
+
 .btn-instrucciones span:nth-child(1) {
   box-shadow:
     -7px -7px 20px 0px #fff9,
@@ -231,6 +222,7 @@ button {
     -moz-transform-origin: 50% 50% -20px;
     transform-origin: 50% 50% -20px;
 }
+
 .btn-instrucciones span:nth-child(2) {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
@@ -239,6 +231,7 @@ button {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
+
 .btn-instrucciones:hover span:nth-child(1) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
@@ -247,6 +240,7 @@ button {
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
+
 .btn-instrucciones:hover span:nth-child(2) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
@@ -257,115 +251,7 @@ button {
   transform: rotateX(-90deg);
 }
 
-
-@keyframes typing {
-    from{width: 0}
-    to{ width: 55%;}
-}
-
-
-@media screen and (max-width:520px){
-
-    .title-animation{
-        margin-left: 5%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 98%;}
-    }
-
-    .btn-basico{
-        font-size: 1rem;
-    }
-
-}
-
-@media only screen and (min-width:521px) and (max-width:720px){
-
-    .title-animation{
-        margin-left: 18%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 92%;}
-    }
-}
-
-@media only screen and (min-width:721px) and (max-width:820px){
-
-   
-    .title-animation{
-        margin-left: 23%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 72%;}
-    }
-}
-
-@media only screen and (min-width:821px) and (max-width:992px){
-
-    .title-animation{
-        margin-left: 25%;
-    }
-
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 69%;}
-    }
-}
-
-@media only screen and (min-width:993px) and (max-width:1024){
-
-    .title-animation{
-        margin-left: 25%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 73%;}
-    }
-}
-
-@media screen and (min-width:1025px){
-
-    .title-animation{
-        margin-left: 27%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 63%;}
-    }
-}
-
-@media screen and (min-width:1200px){
-
-    .title-animation{
-        margin-left: 34%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 50%;}
-    }
-
-    .btn-instrucciones{
-        margin-left: -7%;
-    }
-
-    #q1{
-        font-size: 12px;
-        width: 15rem;
-    }
-}
-
-//lista
-
-.list{
+.list {
     margin-top: -10%;
     justify-content: center;
     text-align: center;
@@ -374,16 +260,15 @@ button {
     border: 1px solid #ffffff;
 }
 
-.btn-add{
+.btn-add {
     @include boton-add-remove;  
-
 }
 
-.btn-remove{
+.btn-remove {
     @include boton-add-remove;
 }
 
-.effet::before{
+.effet::before {
     content: '';
     position: absolute;
     top: 0; left:-35px;
@@ -395,22 +280,121 @@ button {
     transform: translate(37%,-2%) rotate(180deg);      
 }
 
-.effet:hover::before{ 
+.effet:hover::before { 
     opacity: 0; transform: translate(0,0); 
 }
 
-.subtitle-game{
+.subtitle-game {
     margin-top: 25%;
     margin-bottom: 10%;
 }
 
-ul li.checked{
+ul li.checked {
     list-style: none;
     color: #ffffff;
     text-decoration: line-through;
 }
 
-ul li{
+ul li {
     list-style: none;
     text-align: center;
+}
+
+@media screen and (max-width:520px) {
+
+    .title-animation {
+        margin-left: 5%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 98%;}
+    }
+
+    .btn-basico {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width:521px) and (max-width:720px) {
+
+    .title-animation {
+        margin-left: 18%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 92%;}
+    }
+}
+
+@media only screen and (min-width:721px) and (max-width:820px) {
+
+   
+    .title-animation {
+        margin-left: 23%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 72%;}
+    }
+}
+
+@media only screen and (min-width:821px) and (max-width:992px) {
+
+    .title-animation {
+        margin-left: 25%;
+    }
+
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 69%;}
+    }
+}
+
+@media only screen and (min-width:993px) and (max-width:1024) {
+
+    .title-animation {
+        margin-left: 25%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 73%;}
+    }
+}
+ 
+@media screen and (min-width:1025px) {
+
+    .title-animation {
+        margin-left: 27%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 63%;}
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .title-animation {
+        margin-left: 34%;
+    }
+    
+    @keyframes typing {
+        from{width: 0}
+        to{ width: 50%;}
+    }
+
+    .btn-instrucciones {
+        margin-left: -7%;
+    }
+
+    #q1 {
+        font-size: 12px;
+        width: 15rem;
+    }
 }

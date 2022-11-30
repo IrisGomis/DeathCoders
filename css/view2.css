@@ -96,88 +96,6 @@ h1 {
     transform: scale(0.9, 0.9);
   }
 }
-.slider-container {
-  width: 87%;
-  height: 24%;
-  background-image: url(../recursos/img/background/estanque-sin-fondo.png);
-  background-size: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-top: 2%;
-}
-
-.slider {
-  display: flex;
-  width: 400%;
-  height: 100%;
-  -webkit-animation: slider 10s linear infinite alternate;
-          animation: slider 10s linear infinite alternate;
-  list-style: none;
-  align-items: center;
-}
-
-.slider img {
-  height: 8rem;
-  margin-top: 35%;
-}
-
-.slider li {
-  width: 100%;
-}
-
-@-webkit-keyframes slider {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
-
-@keyframes slider {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
 .btn-reinicio {
   display: flex;
   justify-content: center;
@@ -247,23 +165,15 @@ button a:hover {
 }
 .footer {
   position: absolute;
-  width: 100vw;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
   background-color: #000;
   color: white;
   text-align: center;
-  bottom: 0;
 }
 
 @media screen and (max-width: 520px) {
-  .slider-container {
-    width: 85%;
-    height: 25%;
-    margin-top: 10%;
-  }
-  .slider img {
-    height: 5rem;
-    margin-top: 35%;
-  }
   .btn-basico {
     margin-top: 10%;
     padding: 2%;
@@ -275,14 +185,14 @@ button a:hover {
     border-radius: 3rem;
   }
   .title-animation {
-    margin-left: 16%;
+    margin-left: 5%;
   }
   @-webkit-keyframes typing {
     from {
       width: 0;
     }
     to {
-      width: 95%;
+      width: 100%;
     }
   }
   @keyframes typing {
@@ -290,7 +200,7 @@ button a:hover {
       width: 0;
     }
     to {
-      width: 95%;
+      width: 100%;
     }
   }
   .img-flecha-2 {
@@ -300,15 +210,6 @@ button a:hover {
   }
 }
 @media only screen and (min-width: 521px) and (max-width: 720px) {
-  .slider-container {
-    width: 80%;
-    height: 20%;
-    margin-top: 5%;
-  }
-  .slider img {
-    height: 8rem;
-    margin-top: 35%;
-  }
   .btn-basico {
     margin-top: 10%;
     padding: 2%;
@@ -345,15 +246,6 @@ button a:hover {
   }
 }
 @media only screen and (min-width: 721px) and (max-width: 820px) {
-  .slider-container {
-    width: 65%;
-    height: 30%;
-    margin-top: 4%;
-  }
-  .slider img {
-    height: 7rem;
-    margin-top: 35%;
-  }
   .btn-basico {
     margin-top: 15%;
     padding: 2%;
@@ -390,15 +282,6 @@ button a:hover {
   }
 }
 @media only screen and (min-width: 821px) and (max-width: 992px) {
-  .slider-container {
-    width: 65%;
-    height: 35%;
-    margin-top: 2%;
-  }
-  .slider img {
-    height: 7rem;
-    margin-top: 40%;
-  }
   .btn-basico {
     margin-top: 15%;
     padding: 2%;
@@ -435,15 +318,6 @@ button a:hover {
   }
 }
 @media only screen and (min-width: 993px) {
-  .slider-container {
-    width: 55%;
-    height: 20%;
-    margin-top: 1%;
-  }
-  .slider img {
-    height: 8rem;
-    margin-top: 40%;
-  }
   .btn-basico {
     margin-top: 5%;
     padding: 1%;
@@ -480,15 +354,6 @@ button a:hover {
   }
 }
 @media screen and (max-width: 1025) {
-  .slider-container {
-    width: 30%;
-    height: 35%;
-    margin-top: 0.5%;
-  }
-  .slider img {
-    height: 8rem;
-    margin-top: 35%;
-  }
   .btn-basico {
     margin-top: 2%;
     padding: 2%;
@@ -525,15 +390,6 @@ button a:hover {
   }
 }
 @media screen and (min-width: 1200px) {
-  .slider-container {
-    width: 48%;
-    height: 55%;
-    margin-top: 0.5%;
-  }
-  .slider img {
-    height: 10rem;
-    margin-top: 35%;
-  }
   .btn-basico {
     margin-top: 2%;
     padding: 1%;

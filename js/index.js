@@ -73,4 +73,12 @@ function limpiar() {
 
     document.location.reload();
 }
-//----------------------------
+//-------------------------
+
+function killCoder(){
+    let deadIndex = Math.floor(Math.random() * nameCoders.length);
+    const deadCoder = document.getElementById(nameCoders[deadIndex]);
+    deadCoder.remove();
+    nameCoders = arrayCoders();
+    return alert("Coder "+ nameCoders[deadIndex]+ " is Dead!");
+}
