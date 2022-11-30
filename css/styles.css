@@ -121,8 +121,8 @@ button a:hover {
 
 .btn-basico {
   cursor: pointer;
-  padding: 2%;
-  margin: 2%;
+  padding: 1%;
+  margin: 1%;
   font-size: 30px;
   position: relative;
   color: white;
@@ -374,7 +374,9 @@ button a:hover {
 }
 
 #q1 p {
+  font-size: 20px;
   line-height: 80%;
+  padding: 1%;
 }
 
 .titulo-3 {

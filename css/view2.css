@@ -149,21 +149,6 @@ h1 {
     margin-left: -300%;
   }
 }
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(167, 96, 172, 0.7411764706);
-  display: flex;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s 0.9s;
-  --transform: translateY(-100vh);
-  --transition: transform .8s;
-}
-
 .modal__container {
   margin: auto;
   width: 50%;
@@ -178,7 +163,6 @@ h1 {
   grid-auto-columns: 100%;
   transform: var(--transform);
   transition: var(--transition);
-  z-index: 100;
 }
 
 .modal__title {
@@ -225,12 +209,13 @@ h1 {
   align-items: center;
 }
 
-button a {
+button {
   color: #ffffff;
   text-decoration: none;
   letter-spacing: 6px;
 }
-button a:hover {
+
+button:hover {
   color: #3F1C3F;
 }
 

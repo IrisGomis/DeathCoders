@@ -106,22 +106,22 @@ h1{
 
 // Popup
 
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #a760acbd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
+// .modal {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: #a760acbd;
+//     display: flex;
+//     opacity: 0;
+//     pointer-events: none;
+//     transition: opacity .6s .9s;
+//     --transform: translateY(-100vh);
+//     --transition: transform .8s;
     
     
-}
+// }
 .modal__container {
     margin: auto;
     width: 50%;
@@ -136,7 +136,7 @@ h1{
     grid-auto-columns: 100%;
     transform: var(--transform);
     transition: var(--transition);
-    z-index: 100;
+    // z-index: 100;
 }
 
 .modal__title {
@@ -183,16 +183,14 @@ h1{
     align-items: center;
 }
 
-button {
-    
-    a {
+button { 
         color: #ffffff;
         text-decoration: none;
         letter-spacing: 6px;
     }
-    a:hover  {
-        color: #3F1C3F;
-    }
+   
+button:hover {
+    color: #3F1C3F;
 }
 
 .btn-basico {
