@@ -1,49 +1,18 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 @import url('https://fonts.cdnfonts.com/css/roseamp');
-                   
-* {
+@import "variables";   
+@import "mixins";   
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// Mixins
-
-    @mixin texto ($pad, $mar, $size) {
-        padding: $pad;
-        margin: $mar;
-        font-size: $size;
-        font-family:'Roseamp', sans-serif;
-    }
-
-    @mixin boton {
-        position: relative;
-        color: white;
-        background-color: #3F1C3F;
-        border-radius: 2rem;
-        font-family: 'Roseamp', sans-serif;
-    }
-
-    @mixin boton-add-remove {
-        background-color: rgba(76, 95, 109,.8);
-        border:2px solid #a945c7;
-        padding:5px;  
-        width:100px;   
-        margin-top: 10%;
-        text-align:center;  
-        color: rgba(255,255,255,1);
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
-        position: relative;
-    }
-
-
 // Etiquetas
 
 body {
-    background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
+    background: $gradient;
     position: relative;
     padding-bottom: 3em;
     height: 100vh;
@@ -54,47 +23,34 @@ main {
 }
 
 h1 {
-  color: #ffffff;
+  color: $white;
   font-family: 'M41_LOVEBIT', sans-serif;
   text-align: center;
 }  
 
-.contenedor, .contenedor-2 {
-    justify-content: center;
-    font-family: 'Roseamp', sans-serif;
-    color: #ffffff;
-}
-
-.typed-out {
-  overflow: hidden;
-  border-right: 2px solid #ffffff;
-  width: 0;
-  animation: typing 3s steps(14) forwards,
-              blink .8s infinite;
-}
-
-@keyframes typing {
-  from{width: 0}
-  to{ width: 97%;}
-}
-
-@keyframes blink {
-  from{ border-color: #ffffff}
-  to{ border-color: transparent}
+ul li {
+  list-style: none;
+  text-align: center;
 }
 
 h3 {
   margin-top: 20%;
 }
 
+ul li.checked {
+  list-style: none;
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
 button {
   a {
-      color: #ffffff;
+      color: $white;
       text-decoration: none;
       letter-spacing: 6px;
   }
   a:hover  {
-      color: #3F1C3F;
+      color: $third;
   }
 }
 
@@ -104,15 +60,10 @@ button {
    display: none; 
 }
 
-.boton_logo {
-  background-color: transparent;
-  border: transparent;
-}
-
 #q1 {
     background-color:rgba(76, 95, 109, 0.985);
-    color: #ffffff;
-    border: 2px solid #a945c7;
+    color: $white;
+    border: 2px solid $primary;
     border-radius: 10px;
     font-size: 10px;
     width: 11rem;
@@ -124,7 +75,7 @@ button {
 }
 
 #q1 p {
-    line-height: 0.8rem ;
+  line-height: 0.8rem ;
 }
 
 // Clases
@@ -140,20 +91,14 @@ button {
   animation: zoom-in 2s ease-out infinite;
 }
 
-@keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
-
 .img-flecha {
   height: 7rem;
+}
+
+.contenedor, .contenedor-2 {
+  justify-content: center;
+  font-family: 'Roseamp', sans-serif;
+  color: $white;
 }
 
 .contenedor-2 {
@@ -163,21 +108,34 @@ button {
   align-items: center;
 }
 
+.typed-out {
+overflow: hidden;
+border-right: 2px solid $white;
+width: 0;
+animation: typing 3s steps(14) forwards,
+            blink .8s infinite;
+}
+
 .footer{
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: #000;
+  background-color: $black;
   color: white;
   text-align: center;
 }
 
 // Botones
 .btn-basico {
-    cursor: pointer;
-    @include texto(2% 8%, 2%, 20px);
-    @include boton;
+  cursor: pointer;
+  @include texto(2% 8%, 2%, 20px);
+  @include boton;
+}
+
+.boton_logo {
+  border: transparent;
+  background-color: transparent;
 }
 
 .btn-neon {
@@ -187,21 +145,27 @@ button {
 
 .btn-neon:hover {
   border: none;
-  color: #3F1C3F;
-  background-color:#a945c7;
-  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-  0 0 80px #a945c7;
+  color: $third;
+  background-color: $primary;
+  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+  0 0 80px $primary;
 }
 
+.btn-add {
+  @include boton-add-remove;  
+}
+
+.btn-remove {
+  @include boton-add-remove;
+}
 // Botón instrucciones giratorio
 .btn-instrucciones {
+  @include tam(10px, 30px);
     margin-left: -12%;
     font-size: 1rem;
-    color: #ffffff;
+    color: $white;
     border:none;
     box-shadow: none;
-    width: 10px;
-    height: 30px;
     cursor: pointer;
     line-height: 42px;
     -webkit-perspective: 230px;
@@ -210,12 +174,13 @@ button {
 }
 
 .btn-instrucciones span {
-    background: #3F1C3F;
-    background: linear-gradient(0deg, #3F1C3F 0%, #a945c7 100%);
+  @include tam(125px, 40px);
+    background: $third;
+    background: linear-gradient(0deg, $third 0%, $primary 100%);
     display: block;
     position: absolute;
-    width: 125px;
-    height: 40px;
+    // width: 125px;
+    // height: 40px;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
@@ -228,17 +193,17 @@ button {
 }
 
 .btn-instrucciones span:nth-child(1) {
-  box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-    transform: rotateX(90deg);
-    -webkit-transform-origin: 50% 50% -20px;
-    -moz-transform-origin: 50% 50% -20px;
-    transform-origin: 50% 50% -20px;
+box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
 }
 
 .btn-instrucciones span:nth-child(2) {
@@ -269,31 +234,25 @@ button {
   transform: rotateX(-90deg);
 }
 
-//lista
-
 .list {
-    margin-top: -10%;
-    justify-content: center;
-    text-align: center;
-    border-radius: 20px;
-    background-color: #EEBAF9;
-    border: 1px solid #ffffff;
-}
-
-.btn-add {
-    @include boton-add-remove;  
-}
-
-.btn-remove {
-    @include boton-add-remove;
+  margin-top: -10%;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #EEBAF9;
+  border: 1px solid #ffffff;
 }
 
 .effet::before {
+    @include tam(100%, 100%);
     content: '';
     position: absolute;
-    top: 0; left:-35px;
-    width: 100%;  height: 100%; z-index: 1;
-    border-bottom:1px solid #a945c7;
+    top: 0; 
+    // width: 100%;  
+    // height: 100%;
+    z-index: 1;
+    left:-35px;
+    border-bottom:1px solid $primary;
     background-color: rgba(255,255,255,0.1);
     transition: all 0.5s;
     opacity: 1;
@@ -301,7 +260,7 @@ button {
 }
 
 .effet:hover::before { 
-    opacity: 0; transform: translate(0,0); 
+  opacity: 0; transform: translate(0,0); 
 }
 
 .subtitle-game {
@@ -309,123 +268,159 @@ button {
   margin-bottom: 10%;
 }
 
-#q1 p {
-  line-height: 0.8rem;
+// Keyframes
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
 }
 
-ul li.checked {
-  list-style: none;
-  color: #ffffff;
-  text-decoration: line-through;
+@keyframes typing {
+  from{width: 0}
+  to{ width: 97%;}
 }
 
-ul li {
-    list-style: none;
-    text-align: center;
+@keyframes blink {
+  from{ border-color: $white}
+  to{ border-color: transparent}
 }
-
-.titulo-3 {
-  color: #ffffff;
-}
-
 //@media
 
 @media screen and (max-width:520px) {
 
-    .title-animation {
-        margin-left: 5%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 98%;}
-    }
+  .title-animation {
+    margin-left: 5%;
+  }
 
-    .btn-basico {
-        font-size: 1rem;
-    }
+  @keyframes typing {
+    from{width: 0}
+    to{ width: 98%;}
+  }
+
+  .btn-basico {
+    font-size: 1rem;
+  }
 
 }
 
 @media only screen and (min-width:521px) and (max-width:720px) {
 
-    .title-animation {
-        margin-left: 18%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 92%;}
-    }
+  .title-animation {
+    margin-left: 18%;
+  }
+  
+  @keyframes typing {
+    from{width: 0}
+    to{ width: 92%;}
+  }
 }
 
 @media only screen and (min-width:721px) and (max-width:820px) {
 
-   
-    .title-animation {
-        margin-left: 23%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 72%;}
-    }
+  .title-animation {
+    margin-left: 23%;
+  }
+  
+  @keyframes typing {
+    from{width: 0}
+    to{ width: 72%;}
+  }
 }
 
 @media only screen and (min-width:821px) and (max-width:992px) {
 
   .title-animation {
-      margin-left: 25%;
+    margin-left: 25%;
   }
 
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 69%;}
-    }
+  @keyframes typing {
+    from{width: 0}
+    to{ width: 69%;}
+  } 
 }
 
 @media only screen and (min-width:993px) and (max-width:1024) {
 
   .title-animation {
-      margin-left: 25%;
+    margin-left: 25%;
   }
   
   @keyframes typing {
-      from{width: 0}
-      to{ width: 73%;}
+    from{width: 0}
+    to{ width: 73%;}
   }
 }
 
 @media screen and (min-width:1025px) {
 
   .title-animation {
-      margin-left: 27%;
+    margin-left: 27%;
   }
   
   @keyframes typing {
-      from{width: 0}
-      to{ width: 63%;}
+    from{width: 0}
+    to{ width: 63%;}
   }
 }
 
 @media screen and (min-width:1200px) {
 
-    .title-animation {
-        margin-left: 34%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 50%;}
-    }
+  .title-animation {
+    margin-left: 34%;
+  }
+  
+  @keyframes typing {
+    from{width: 0}
+    to{ width: 50%;}
+  }
 
-    .btn-instrucciones {
-        margin-left: -7%;
-    }
+  .btn-instrucciones {
+    margin-left: -7%;
+  }
 
-    #q1 {
-        font-size: 12px;
-        width: 15rem;
-    }
+  #q1 {
+    font-size: 12px;
+    width: 15rem;
+  }
 }
 
+.swal-modal {
+  background-color:rgb(142, 153, 160);
+  border: 1px solid #ffffff;
+  
+}
+
+.swal-overlay {
+  background-color: #3f1c3fc2;
+}
+
+.swal-text {
+  color: #ffffff;
+}
+
+.swal-button {
+  background-color: #3F1C3F;
+}
+
+.btn-audio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.btn-audio-play, .btn-audio-stop {
+  background-color: transparent;
+  border: transparent;
+  margin: 5px;
+}
+
+iframe{
+  display: none;
+}

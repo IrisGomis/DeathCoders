@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
+  background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #000000 90%);
   position: relative;
   padding-bottom: 3em;
   height: 100vh;
@@ -61,12 +61,10 @@ h1 {
 }
 
 .title-animation {
-  display: grid;
-  width: 100vw;
+  margin-left: 5%;
 }
 
 .typed-out {
-  justify-self: center;
   overflow: hidden;
   border-right: 2px solid #ffffff;
   width: 0;
@@ -114,12 +112,13 @@ h1 {
 }
 
 .ventana {
+  position: static;
+  z-index: 20;
+  padding-top: 0;
   width: 95vw;
   grid-column-start: 1;
   grid-column-end: 6;
   justify-self: center;
-  position: static;
-  z-index: 20;
 }
 
 .cielo {
@@ -132,13 +131,14 @@ h1 {
 }
 
 .estanque {
+  position: absolute;
+  z-index: 2;
+  padding-top: 0;
   width: 70vw;
   margin-top: 16%;
   grid-column-start: 1;
   grid-column-end: 5;
   justify-self: center;
-  position: absolute;
-  z-index: 2;
 }
 
 .pato-1 {
@@ -274,8 +274,19 @@ h1 {
 .btn-reinicio {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 100%;
+  grid-template-rows: 40%;
   position: relative;
+  margin-top: 50%;
+}
+
+.btn-basico {
+  padding: 3%;
+  margin: 3%;
+  font-size: 20px;
+  position: relative;
+  color: white;
+  background-color: #3F1C3F;
+  border-radius: 3rem;
 }
 
 button a {
@@ -302,11 +313,21 @@ button a:hover {
   transition: 0.4s;
 }
 
-btn-neon:hover {
+.btn-neon:hover {
   border: none;
   color: #3F1C3F;
   background-color: #a945c7;
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.footer {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
 }
 
 .img-flecha-2 {
@@ -340,16 +361,17 @@ btn-neon:hover {
   }
 }
 .footer {
+  width: 100%;
+  height: 30px;
   position: relative;
   bottom: 0;
-  width: 100%;
-  height: 40px;
-  background-color: #000;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
-/*@media screen and (max-width:520px) {
+/*
+@media screen and (max-width:520px) {
 
     .btn-basico {
         margin-top: 10%;
@@ -376,50 +398,66 @@ btn-neon:hover {
 
 @media only screen and (min-width:521px) and (max-width:720px) {
 
-  .btn-basico {
-      margin-top: 10%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 10%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
 
   .title-animation {
       margin-left: 15%;
   }
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 92%;}
-  }
-
-  .img-flecha-2 {
-      height: 4rem;
-      margin-left: 10%;
-      margin-top: -3%;
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 92%;}
 }
+
+.img-flecha-2 {
+    margin-top: 80%;
+    height: 4rem;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.btn-reinicio {
+  margin-top: 50%;
+  grid-template-rows: 50%;
+}
+}
+
 
 @media only screen and (min-width:721px) and (max-width:820px) {
 
-  .btn-basico {
-      margin-top: 15%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 15%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
 
   .title-animation {
       margin-left: 25%;
   }
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 80%;}
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 80%;}
+}
 
-  .img-flecha-2 {
-      height: 4rem;
-      margin-left: 13%;
-      margin-top: -3%;
-  }
+.img-flecha-2 {
+  margin-top: 70%;
+  height: 4rem;
+  margin-left: 10%;
+}
+
+.btn-reinicio {
+  margin-top: 50%;
+  grid-template-rows: 40%;
+}
+
+body{
+  height: 100%;
+}
 }
 
 @media only screen and (min-width:821px) and (max-width:992px) {
@@ -428,35 +466,43 @@ btn-neon:hover {
       margin-left: 25%;
   }
 
-  .btn-basico {
-      margin-top: 15%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 15%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
 
   .title-animation {
       margin-left: 25%;
   }
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 80%;}
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 80%;}
+}
 
-  .img-flecha-2 {
-      height: 4rem;
-      margin-left: 15%;
-      margin-top: -5%;
-  }
+.img-flecha-2 {
+  margin-top: 65%;
+  height: 4rem;
+  margin-left: 10%;
+}
+
+.btn-reinicio {
+  margin-top: 50%;
+}
+
+body{
+  height: 100vh;
+}
 }
 
 @media only screen and (min-width:993px) {
 
-  .btn-basico {
-      margin-top: 5%;
-      @include texto(1%, 1%, 15px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 5%;
+    @include texto(1%, 1%, 15px);
+    @include boton;
+}
 
   .title-animation {
       margin-left: 27%;
@@ -467,20 +513,28 @@ btn-neon:hover {
       to{ width: 73%;}
   }
 
-  .img-flecha-2 {
-      height: 4rem;
-      margin-left: 20%;
-      margin-top: -4%;
-  }
+.img-flecha-2 {
+    height: 4rem;
+    margin-left: 20%;
+    margin-top: 58%;
+}
+
+.btn-reinicio {
+  margin-top: 50%;
+}
+
+body {
+  height: 100%;
+}
 }
 
 @media screen and (max-width:1025) {
 
-  .btn-basico {
-      margin-top: 2%;
-      @include texto(2%, 2%, 10px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 2%;
+    @include texto(2%, 2%, 10px);
+    @include boton;
+}
 
   .title-animation{
       margin-left: -30%;
@@ -491,29 +545,39 @@ btn-neon:hover {
       to{ width: 63%;}
   }
 
-  .img-flecha-2{
-      height: 5rem;
-      margin-left: 24%;
-      margin-top: -4%;
-  }
+.img-flecha-2{
+    height: 5rem;
+    margin-left: 24%;
+    margin-top: -2%;
 }
 
-  @media screen and (min-width:1200px) {
+.img-flecha-2 {
+  height: 4rem;
+  margin-left: 20%;
+  margin-top: 58%;
+}
 
-  .btn-basico {
-      margin-top: 2%;
-      @include texto(1%, 1%, 20px);
-      @include boton;
-  }
+.btn-reinicio {
+  margin-top: -10%;
+}
+}
+
+@media screen and (min-width:1200px) {
+
+.btn-basico {
+  margin-top: 2%;
+  @include texto(1%, 1%, 20px);
+  @include boton;
+}
 
   .title-animation {
       margin-left: 35%;
   }
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 50%;}
-  }
+@keyframes typing {
+  from{width: 0}
+  to{ width: 65%;}
+}
 
   .img-flecha-2 {
       height: 5rem;
