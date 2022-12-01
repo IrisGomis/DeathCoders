@@ -8,7 +8,6 @@
 body {
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #000000 90%);
   position: relative;
-  padding-bottom: 3em;
   height: 100vh;
   width: 100vw;
 }
@@ -60,10 +59,9 @@ h1 {
        column-span: all;
 }
 
-.title-animation {
+/*.title-animation {
   margin-left: 5%;
-}
-
+}*/
 .typed-out {
   overflow: hidden;
   border-right: 2px solid #ffffff;
@@ -77,7 +75,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 35%;
+    width: 36%;
   }
 }
 
@@ -86,7 +84,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 35%;
+    width: 36%;
   }
 }
 @-webkit-keyframes blink {
@@ -373,215 +371,65 @@ button a:hover {
 /*
 @media screen and (max-width:520px) {
 
-    .btn-basico {
-        margin-top: 10%;
-        @include texto(2%, 2%, 15px);
-        @include boton;
-    }
+  .title-animation {
+      margin-left: 5%;
+  }
 
-    .title-animation {
-        margin-left: 5%;
-    }
-
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 95%;}
-    }
-
-    .img-flecha-2 {
-        height: 4rem;
-        margin-left: 10%;
-        margin-top: 2%;
-    }
+  @keyframes typing {
+      from{width: 0}
+      to{ width: 100%;}
+  }
 
 }
 
 @media only screen and (min-width:521px) and (max-width:720px) {
 
-.btn-basico {
-    margin-top: 10%;
-    @include texto(2%, 2%, 15px);
-    @include boton;
-}
-
   .title-animation {
       margin-left: 15%;
   }
 
-@keyframes typing {
+  @keyframes typing {
     from{width: 0}
     to{ width: 92%;}
+  }
 }
-
-.img-flecha-2 {
-    margin-top: 80%;
-    height: 4rem;
-    margin-left: 50%;
-    margin-top: 5%;
-}
-
-.btn-reinicio {
-  margin-top: 50%;
-  grid-template-rows: 50%;
-}
-}
-
 
 @media only screen and (min-width:721px) and (max-width:820px) {
 
-.btn-basico {
-    margin-top: 15%;
-    @include texto(2%, 2%, 15px);
-    @include boton;
-}
-
-  .title-animation {
-      margin-left: 25%;
+  body{
+    height: 100%;
   }
-
-@keyframes typing {
-    from{width: 0}
-    to{ width: 80%;}
-}
-
-.img-flecha-2 {
-  margin-top: 70%;
-  height: 4rem;
-  margin-left: 10%;
-}
-
-.btn-reinicio {
-  margin-top: 50%;
-  grid-template-rows: 40%;
-}
-
-body{
-  height: 100%;
-}
 }
 
 @media only screen and (min-width:821px) and (max-width:992px) {
 
-  .title-animation {
-      margin-left: 25%;
+  body{
+    height: 100vh;
   }
-
-.btn-basico {
-    margin-top: 15%;
-    @include texto(2%, 2%, 15px);
-    @include boton;
-}
-
-  .title-animation {
-      margin-left: 25%;
-  }
-
-@keyframes typing {
-    from{width: 0}
-    to{ width: 80%;}
-}
-
-.img-flecha-2 {
-  margin-top: 65%;
-  height: 4rem;
-  margin-left: 10%;
-}
-
-.btn-reinicio {
-  margin-top: 50%;
-}
-
-body{
-  height: 100vh;
-}
 }
 
 @media only screen and (min-width:993px) {
 
-.btn-basico {
-    margin-top: 5%;
-    @include texto(1%, 1%, 15px);
-    @include boton;
-}
-
-  .title-animation {
-      margin-left: 27%;
+  body {
+    height: 100%;
   }
-
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 73%;}
-  }
-
-.img-flecha-2 {
-    height: 4rem;
-    margin-left: 20%;
-    margin-top: 58%;
-}
-
-.btn-reinicio {
-  margin-top: 50%;
-}
-
-body {
-  height: 100%;
-}
 }
 
 @media screen and (max-width:1025) {
 
-.btn-basico {
-    margin-top: 2%;
-    @include texto(2%, 2%, 10px);
-    @include boton;
-}
-
-  .title-animation{
-      margin-left: -30%;
-  }
-
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 63%;}
-  }
-
-.img-flecha-2{
-    height: 5rem;
-    margin-left: 24%;
-    margin-top: -2%;
-}
-
-.img-flecha-2 {
-  height: 4rem;
-  margin-left: 20%;
-  margin-top: 58%;
-}
-
-.btn-reinicio {
-  margin-top: -10%;
-}
 }
 
 @media screen and (min-width:1200px) {
 
-.btn-basico {
-  margin-top: 2%;
-  @include texto(1%, 1%, 20px);
-  @include boton;
 }
 
-  .title-animation {
-      margin-left: 35%;
-  }
+.title-animation {
+    margin-left: 35%;
+}
 
 @keyframes typing {
   from{width: 0}
   to{ width: 65%;}
 }
 
-  .img-flecha-2 {
-      height: 5rem;
-      margin-left: 25%;
-      margin-top: 1%;
-  }
 }*//*# sourceMappingURL=view2.css.map */
