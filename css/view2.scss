@@ -1,40 +1,40 @@
-  @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
-  @import "variables";
-  @import "mixins";
-  
+@import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+@import "variables";
+@import "mixins";
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    background: $gradient;
-    position: relative;
-    padding-bottom: 3em;
-    height: 100vh;
+  background: $gradient;
+  position: relative;
+  padding-bottom: 3em;
+  height: 100vh;
 }
 
 h1 {
-  color: #ffffff;
-  font-family: 'M41_LOVEBIT', sans-serif;
+color: #ffffff;
+font-family: 'M41_LOVEBIT', sans-serif;
 }  
 
 .img-logo {
-  display: flex;
-  justify-content: center;
-  height: 10rem;
+display: flex;
+justify-content: center;
+height: 10rem;
 }
 
 .img-flecha-2{
-  height: 3rem;
-  margin-left: 5%;
-  animation: blink-2 0.5s infinite;
+height: 3rem;
+margin-left: 5%;
+animation: blink-2 0.5s infinite;
 }
 
 .logo-animado {
-    height: 10rem;
-    animation: zoom-in 2s ease-out infinite;
+  height: 10rem;
+  animation: zoom-in 2s ease-out infinite;
 }
 
 .title-animation {
@@ -42,374 +42,404 @@ h1 {
 }
 
 .typed-out {
-  overflow: hidden;
-  border-right: 2px solid #ffffff;
-  width: 0;
-  animation: typing 3s steps(14) forwards,
-              blink .8s infinite;
+overflow: hidden;
+border-right: 2px solid #ffffff;
+width: 0;
+animation: typing 3s steps(14) forwards,
+            blink .8s infinite;
 }
 
 .cursor-mira {
-  cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
+cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
 }
 
 .ventana {
-  @include position(absolute, 50, 0);
-  width: 100%;
-  display: block;
-  top: 12rem;
-  padding-left: 8%;
-  padding-right: 8%;
-  overflow: hidden;
+@include position(absolute, 80, 0);
+width: 100%;
+display: block;
+top: 12rem;
+padding-left: 8%;
+padding-right: 8%;
+overflow: hidden;
 }
 
 .cielo {
-  @include position(absolute, 1, 0);
-  width: 90%;
-  padding: 8% 14%;
+@include position(absolute, 1, 0);
+width: 90%;
+padding: 8% 14%;
 }
 
 .estanque {
-  @include position(absolute, 3, 0);
-  width: 100%;
-  padding: 13% 20% 0 20%;
+@include position(absolute, 3, 0);
+width: 100%;
+padding: 13% 20% 0 20%;
 }
 
-.pato1, .pato2, .pato3, .pato4, .pato5, .pato6, .pato7, .pato8 {
-  @include tam(8%, 8%);
-  }
+.pato-1, .pato-2, .pato-3, .pato-4, .pato-5, .pato-6, .pato-7, .pato-8, .pato-9 {
+@include tam(8%, 8%);
+}
 
 .pato-1 {
-  @include position(absolute, 5, 30%);
-  animation: pato1 30s infinite ;
+@include position(absolute, 5, 30%);
+animation: pato1 30s infinite ;
 }
 
 .pato-2 {
-  @include position(absolute, 4, 40%);
-  animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+@include position(absolute, 4, 40%);
+animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 
 .pato-3 {
-  @include position(absolute, 4, 31%);
-  animation: pato1 15s infinite;
+@include position(absolute, 4, 31%);
+animation: pato1 15s infinite;
 }
 
 .pato-4 {
-  @include position(absolute, 5, 12%);
-  animation: pato2 10s infinite ease-in-out;  
+@include position(absolute, 5, 12%);
+animation: pato2 10s infinite ease-in-out;  
 }
 
 .pato-5 {
-  @include position(absolute, 3, 29%);
-  animation: pato3 17s infinite ease-in-out; 
+@include position(absolute, 3, 29%);
+animation: pato3 17s infinite ease-in-out; 
 }
 
 .pato-6 {
-  @include position(absolute, 4, 34%);
-  animation: pato1 40s infinite ease-in-out; 
+@include position(absolute,3 , 34%);
+animation: pato1 40s infinite ease-in-out; 
 }
 
 .pato-7 {
-  @include position(absolute, 2, 19%);
-  animation: pato1 5s infinite ease-in-out; 
+@include position(absolute, 4, 19%);
+animation: pato1 5s infinite ease-in-out; 
 }
 
 .pato-8 {
-  @include position(absolute, 5, 31%);
-  animation: pato1 20s infinite; 
+@include position(absolute, 5, 31%);
+animation: pato1 20s infinite; 
 }
 
+.pato-9{
+  margin-left: 50%;
+  margin-top: 10%;
+  z-index: -50;
+}
 .btn-reinicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 40%;
+  position: relative;
+  margin-top: 50%;
 }
 
 .btn-basico {
-  @include texto(2%, 2%, 30px);
-  @include boton;
+@include texto(3%, 3%, 20px);
+@include boton;
 }
 
+button a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 6px;
+}
+button a:hover {
+  color: #3F1C3F;
+}
 .btn-neon {
-  overflow: hidden;
-  transition: 0.4s;
+overflow: hidden;
+transition: 0.4s;
 }
 
 .btn-neon:hover {
-  border: none;
-  color: $third;
-  background-color:$primary;
-  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
-  0 0 80px $primary;
+border: none;
+color: $third;
+background-color:$primary;
+box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+0 0 80px $primary;
 }
 
 .footer {
-  @include tam(100%, 30px);
-  position: absolute;
-  bottom: 0;
-  background-color: $black;
-  color: $white;
-  text-align: center;
+@include tam(100%, 30px);
+position: absolute;
+bottom: 0;
+background-color: $black;
+color: $white;
+text-align: center;
 }
 
 @keyframes typing {
-  from{width: 0}
-  to{ width: 97%;}
+from{width: 0}
+to{ width: 97%;}
 }
 
 @keyframes blink {
-  from{ border-color: #ffffff}
-  to{ border-color: transparent}
+from{ border-color: #ffffff}
+to{ border-color: transparent}
 }
 
 @keyframes blink-2 {
-  0% {opacity: 0}
-  49%{opacity: 0}
-  50% {opacity: 1}
+0% {opacity: 0}
+49%{opacity: 0}
+50% {opacity: 1}
 }
 
 @keyframes pato1 {
-  from{
-    left: 80%;
-  }
+from{
+  left: 80%;
+}
 
-  to{
-    left: 10%;
-  }
+to{
+  left: 10%;
+}
 }
 
 @keyframes pato2 {
-  from{
-    left: 15%;
-  }
+from{
+  left: 15%;
+}
 
-  to{
-    left: 80%;
-  }
+to{
+  left: 80%;
+}
 }
 
 @keyframes pato3 {
-  from{
-    left: 15%;
-  }
+from{
+  left: 15%;
+}
 
-  to{
-    left: 47%;
-  }
+to{
+  left: 47%;
+}
 }
 
 @media screen and (max-width:520px) {
-    
-    .btn-basico {
-        margin-top: 10%;
-        @include texto(2%, 2%, 15px);
-        @include boton;
-    }
-
-    .title-animation {
-        margin-left: 5%;
-    }
-    
-    @keyframes typing {
-        from{width: 0}
-        to{ width: 100%;}
-    }
-
-    .img-flecha-2 {
-        height: 4rem;
-        margin-left: 10%;
-        margin-top: 80%;
-    }
-}
-
-@keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
-
-@media only screen and (min-width:521px) and (max-width:720px) {
-    
+  
   .btn-basico {
-      margin-top: 10%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
+    margin-top: 10%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
   }
 
   .title-animation {
-      margin-left: 15%;
+    margin-left: 5%;
   }
-
+  
   @keyframes typing {
-      from{width: 0}
-      to{ width: 92%;}
+    from{width: 0}
+    to{ width: 100%;}
   }
 
   .img-flecha-2 {
-      margin-top: 80%;
-      height: 4rem;
-      margin-left: 10%;
+    height: 4rem;
+    margin-left: 15%;
+    margin-top: 12%;
   }
+}
 
-  .btn-reinicio {
-    margin-top: -10%;
-  }
+@keyframes zoom-in {
+0% {
+  transform: scale(0.9, 0.9);
+}
+50% {
+  transform: scale(1.1, 1.1);
+}
+100% {
+  transform: scale(0.9, 0.9);
+}
+}
+
+@media only screen and (min-width:521px) and (max-width:720px) {
+  
+.btn-basico {
+    margin-top: 10%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
+
+.title-animation {
+    margin-left: 15%;
+}
+
+@keyframes typing {
+    from{width: 0}
+    to{ width: 92%;}
+}
+
+.img-flecha-2 {
+    margin-top: 80%;
+    height: 4rem;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.btn-reinicio {
+  margin-top: 50%;
+  grid-template-rows: 50%;
+}
 }
 
 
 @media only screen and (min-width:721px) and (max-width:820px) {
-    
-  .btn-basico {
-      margin-top: 15%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
-  }
+  
+.btn-basico {
+    margin-top: 15%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
 
-  .title-animation {
-      margin-left: 25%;
-  }
+.title-animation {
+    margin-left: 25%;
+}
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 80%;}
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 80%;}
+}
 
-  .img-flecha-2 {
-    margin-top: 70%;
-    height: 4rem;
-    margin-left: 10%;
-  }
+.img-flecha-2 {
+  margin-top: 70%;
+  height: 4rem;
+  margin-left: 10%;
+}
 
-  .btn-reinicio {
-    margin-top: -8%;
-  }
+.btn-reinicio {
+  margin-top: 50%;
+  grid-template-rows: 40%;
+}
+
+body{
+  height: 100%;
+}
 }
 
 @media only screen and (min-width:821px) and (max-width:992px) {
 
-  .title-animation {
-      margin-left: 25%;
-  }
+.title-animation {
+    margin-left: 25%;
+}
 
-  .btn-basico {
-      margin-top: 15%;
-      @include texto(2%, 2%, 15px);
-      @include boton;
-  }
+.btn-basico {
+    margin-top: 15%;
+    @include texto(2%, 2%, 15px);
+    @include boton;
+}
 
-  .title-animation {
-      margin-left: 25%;
-  }
+.title-animation {
+    margin-left: 25%;
+}
 
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 80%;}
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 80%;}
+}
 
-  .img-flecha-2 {
-    margin-top: 65%;
-    height: 4rem;
-    margin-left: 10%;
-  }
+.img-flecha-2 {
+  margin-top: 65%;
+  height: 4rem;
+  margin-left: 10%;
+}
 
-  .btn-reinicio {
-    margin-top: -10%;
-  }
+.btn-reinicio {
+  margin-top: 50%;
+}
+
+body{
+  height: 100vh;
+}
 }
 
 @media only screen and (min-width:993px) {
 
-  .btn-basico {
-      margin-top: 5%;
-      @include texto(1%, 1%, 15px);
-      @include boton;
-  }
-
-  .title-animation  {
-      margin-left: 27%;
-  }
-  
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 73%;}
-  }
-
-  .img-flecha-2 {
-      height: 4rem;
-      margin-left: 20%;
-      margin-top: 58%;
-  }
-
-  .btn-reinicio {
-    margin-top: -10%;
-  }
+.btn-basico {
+    margin-top: 5%;
+    @include texto(1%, 1%, 15px);
+    @include boton;
 }
 
-@media screen and (max-width:1025) {
+.title-animation  {
+    margin-left: 27%;
+}
 
-  .btn-basico {
-      margin-top: 2%;
-      @include texto(2%, 2%, 10px);
-      @include boton;
-  }
+@keyframes typing {
+    from{width: 0}
+    to{ width: 73%;}
+}
 
-  .title-animation{
-      margin-left: -30%;
-  }
-  
-  @keyframes typing {
-      from{width: 0}
-      to{ width: 63%;}
-  }
-
-  .img-flecha-2{
-      height: 5rem;
-      margin-left: 24%;
-      margin-top: -2%;
-  }
-
-  .img-flecha-2 {
+.img-flecha-2 {
     height: 4rem;
     margin-left: 20%;
     margin-top: 58%;
 }
 
-  .btn-reinicio {
-    margin-top: -10%;
-  }
+.btn-reinicio {
+  margin-top: 50%;
+}
+
+body {
+  height: 100%;
+}
+}
+
+@media screen and (max-width:1025) {
+
+.btn-basico {
+    margin-top: 2%;
+    @include texto(2%, 2%, 10px);
+    @include boton;
+}
+
+.title-animation{
+    margin-left: -30%;
+}
+
+@keyframes typing {
+    from{width: 0}
+    to{ width: 63%;}
+}
+
+.img-flecha-2{
+    height: 5rem;
+    margin-left: 24%;
+    margin-top: -2%;
+}
+
+.img-flecha-2 {
+  height: 4rem;
+  margin-left: 20%;
+  margin-top: 58%;
+}
+
+.btn-reinicio {
+  margin-top: -10%;
+}
 }
 
 @media screen and (min-width:1200px) {
 
-  .btn-basico {
-    margin-top: 2%;
-    @include texto(1%, 1%, 20px);
-    @include boton;
-  }
+.btn-basico {
+  margin-top: 2%;
+  @include texto(1%, 1%, 20px);
+  @include boton;
+}
 
-  .title-animation {
-    margin-left: 35%;
-  }
+.title-animation {
+  margin-left: 35%;
+}
 
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 65%;}
-  }
+@keyframes typing {
+  from{width: 0}
+  to{ width: 65%;}
+}
 
-  .img-flecha-2 {
-    margin-top: 28%;
-    height: 4rem;
-    margin-left: 30%;
-  }
+.img-flecha-2 {
+  margin-top: 28%;
+  height: 4rem;
+  margin-left: 30%;
+}
 
-  .btn-reinicio {
-    margin-top: -6%;
-    justify-content: center;
-  }  
+.btn-reinicio {
+  margin-top: 50%;
+  justify-content: center;
+}  
 }
