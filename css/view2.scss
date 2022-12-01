@@ -1,29 +1,15 @@
   @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
-
+  @import "variables";
+  @import "mixins";
+  
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-  // Mixins
-@mixin texto ($pad, $mar, $size) {
-  padding: $pad;
-  margin: $mar;
-  font-size: $size;
-}
-
-@mixin boton {
-  position: relative;
-  color: white;
-  background-color: #3F1C3F;
-  border-radius: 3rem;
-}
-
-//Etiquetas
 
 body {
-    background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
+    background: $gradient;
     position: relative;
     padding-bottom: 3em;
     height: 100vh;
@@ -33,6 +19,23 @@ h1 {
   color: #ffffff;
   font-family: 'M41_LOVEBIT', sans-serif;
 }  
+
+.img-logo {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+}
+
+.img-flecha-2{
+  height: 3rem;
+  margin-left: 5%;
+  animation: blink-2 0.5s infinite;
+}
+
+.logo-animado {
+    height: 10rem;
+    animation: zoom-in 2s ease-out infinite;
+}
 
 .title-animation {
   margin-left: 5%;
@@ -46,6 +49,109 @@ h1 {
               blink .8s infinite;
 }
 
+.cursor-mira {
+  cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
+}
+
+.ventana {
+  @include position(absolute, 50, 0);
+  width: 100%;
+  display: block;
+  top: 12rem;
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
+}
+
+.cielo {
+  @include position(absolute, 1, 0);
+  width: 90%;
+  padding: 8% 14%;
+}
+
+.estanque {
+  @include position(absolute, 3, 0);
+  width: 100%;
+  padding: 13% 20% 0 20%;
+}
+
+.pato1, .pato2, .pato3, .pato4, .pato5, .pato6, .pato7, .pato8 {
+  @include tam(8%, 8%);
+  }
+
+.pato-1 {
+  @include position(absolute, 5, 30%);
+  animation: pato1 30s infinite ;
+}
+
+.pato-2 {
+  @include position(absolute, 4, 40%);
+  animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.pato-3 {
+  @include position(absolute, 4, 31%);
+  animation: pato1 15s infinite;
+}
+
+.pato-4 {
+  @include position(absolute, 5, 12%);
+  animation: pato2 10s infinite ease-in-out;  
+}
+
+.pato-5 {
+  @include position(absolute, 3, 29%);
+  animation: pato3 17s infinite ease-in-out; 
+}
+
+.pato-6 {
+  @include position(absolute, 4, 34%);
+  animation: pato1 40s infinite ease-in-out; 
+}
+
+.pato-7 {
+  @include position(absolute, 2, 19%);
+  animation: pato1 5s infinite ease-in-out; 
+}
+
+.pato-8 {
+  @include position(absolute, 5, 31%);
+  animation: pato1 20s infinite; 
+}
+
+.btn-reinicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-basico {
+  @include texto(2%, 2%, 30px);
+  @include boton;
+}
+
+.btn-neon {
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.btn-neon:hover {
+  border: none;
+  color: $third;
+  background-color:$primary;
+  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+  0 0 80px $primary;
+}
+
+.footer {
+  @include tam(100%, 30px);
+  position: absolute;
+  bottom: 0;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+}
+
 @keyframes typing {
   from{width: 0}
   to{ width: 97%;}
@@ -56,163 +162,10 @@ h1 {
   to{ border-color: transparent}
 }
 
-.img-logo {
-  display: flex;
-  justify-content: center;
-  height: 10rem;
-}
-
-.logo-animado {
-    height: 10rem;
-    animation: zoom-in 2s ease-out infinite;
-}
-
-@keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
-
-.cursor-mira {
-  cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
-}
-
-/*.contenedor-marco{
-  display: grid;
-  grid-template-rows: 15vh 15vh 15vh 15vh;
-  grid-template-columns: 33% 33% 33%;
-}*/
-
-.ventana {
-  z-index: 50;
-  position: absolute;
-  width: 100%;
-  display: block;
-  top: 12rem;
-  padding-left: 8%;
-  padding-right: 8%;
-  overflow: hidden;
-}
-
-.cielo {
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  padding-right: 14%;
-  padding-left: 14%;
-  padding-top: 8%;
-  padding-bottom: 8%;
-}
-
-.estanque {
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  padding-right: 20%;
-  padding-left: 20%;
-  padding-top: 13%;
-}
-
-.pato-1 {
-  padding-top: 30%;
-  z-index: 5;
-  position: absolute;
-  animation: pato1 30s infinite ;
-}
-
-.pato1 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-2 {
-  padding-top: 40%;
-  z-index: 4;
-  position: absolute;
-  animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
-
-.pato2 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-3 {
-  padding-top: 31%;
-  z-index: 4;
-  position: absolute;
-  animation: pato1 15s infinite;
-}
-
-.pato3 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-4 {
-  padding-top: 12%;
-  z-index: 5;
-  position: absolute;
-  animation: pato2 10s infinite ease-in-out;  
-}
-
-.pato4 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-5 {
-  padding-top: 29%;
-  z-index: 3;
-  position: absolute;
-  animation: pato3 17s infinite ease-in-out; 
-}
-
-.pato5 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-6 {
-  padding-top: 34%;
-  z-index: 4;
-  position: absolute;
-  animation: pato1 40s infinite ease-in-out; 
-}
-
-.pato6 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-7 {
-  padding-top: 19%;
-  z-index: 2;
-  position: absolute;
-  animation: pato1 5s infinite ease-in-out; 
-}
-
-.pato7 {
-  width: 8%;
-  height: 8%;
-}
-
-.pato-8 {
-  padding-top: 31%;
-  z-index: 5;
-  position: absolute;
-  animation: pato1 20s infinite; 
-}
-
-.pato8 {
-  width: 8%;
-  height: 8%;
+@keyframes blink-2 {
+  0% {opacity: 0}
+  49%{opacity: 0}
+  50% {opacity: 1}
 }
 
 @keyframes pato1 {
@@ -245,63 +198,6 @@ h1 {
   }
 }
 
-.btn-reinicio {
-  display: flex;
-  justify-content: center;
-  margin-top: -15%;
-}
-
-button {
-  a {
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: 6px;
-  }
-  a:hover  {
-      color: #3F1C3F;
-  }
-}
-
-.btn-basico {
-  @include texto(2%, 2%, 30px);
-  @include boton;
-}
-
-.btn-neon {
-  overflow: hidden;
-  transition: 0.4s;
-}
-
-.btn-neon:hover {
-  border: none;
-  color: #3F1C3F;
-  background-color:#a945c7;
-  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-  0 0 80px #a945c7;
-}
-
-.img-flecha-2 {
-  height: 3rem;
-  margin-left: 5%;
-  animation: blink-2 0.5s infinite;
-}
-
-@keyframes blink-2 {
-  0% {opacity: 0}
-  49%{opacity: 0}
-  50% {opacity: 1}
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  background-color: #000;
-  color: white;
-  text-align: center;
-}
-
 @media screen and (max-width:520px) {
     
     .btn-basico {
@@ -326,6 +222,17 @@ button {
     }
 }
 
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
 
 @media only screen and (min-width:521px) and (max-width:720px) {
     

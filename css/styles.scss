@@ -1,52 +1,21 @@
 @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 @import url('https://fonts.cdnfonts.com/css/roseamp');
-                   
+@import "variables";   
+@import "mixins";   
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// Mixins
-
-@mixin texto ($pad, $mar, $size) {
-  padding: $pad;
-  margin: $mar;
-  font-size: $size;
-  font-family:'Roseamp', sans-serif;
-}
-
-@mixin boton {
-  position: relative;
-  color: white;
-  background-color: #3F1C3F;
-  border-radius: 2rem;
-  font-family: 'Roseamp', sans-serif;
-}
-
-@mixin boton-add-remove {
-  background-color: rgba(76, 95, 109,.8);
-  border:2px solid #a945c7;
-  padding:5px;  
-  width:100px;   
-  margin-top: 10%;
-  text-align:center;  
-  color: rgba(255,255,255,1);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  position: relative;
-}
-
-
 // Etiquetas
 
 body {
-  background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
-  position: relative;
-  padding-bottom: 3em;
-  height: 100vh;
+    background: $gradient;
+    position: relative;
+    padding-bottom: 3em;
+    height: 100vh;
 }
 
 main {
@@ -54,43 +23,34 @@ main {
 }
 
 h1 {
-  color: #ffffff;
+  color: $white;
   font-family: 'M41_LOVEBIT', sans-serif;
   text-align: center;
 }  
 
-.contenedor, .contenedor-2 {
-  justify-content: center;
-  font-family: 'Roseamp', sans-serif;
+ul li {
+  list-style: none;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20%;
+}
+
+ul li.checked {
+  list-style: none;
   color: #ffffff;
-}
-
-.typed-out {
-  overflow: hidden;
-  border-right: 2px solid #ffffff;
-  width: 0;
-  animation: typing 3s steps(14) forwards,
-              blink .8s infinite;
-}
-
-@keyframes typing {
-  from{width: 0}
-  to{ width: 97%;}
-}
-
-@keyframes blink {
-  from{ border-color: #ffffff}
-  to{ border-color: transparent}
+  text-decoration: line-through;
 }
 
 button {
   a {
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 6px;
+      color: $white;
+      text-decoration: none;
+      letter-spacing: 6px;
   }
   a:hover  {
-    color: #3F1C3F;
+      color: $third;
   }
 }
 
@@ -100,23 +60,18 @@ button {
    display: none; 
 }
 
-.boton_logo {
-  background-color: transparent;
-  border: transparent;
-}
-
 #q1 {
-  background-color:rgba(76, 95, 109, 0.985);
-  color: #ffffff;
-  border: 2px solid #a945c7;
-  border-radius: 10px;
-  font-size: 10px;
-  width: 11rem;
-  text-align: justify;
-  padding: 5px 5px;
-  text-decoration: none;
-  margin-top: 3rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+    background-color:rgba(76, 95, 109, 0.985);
+    color: $white;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    font-size: 10px;
+    width: 11rem;
+    text-align: justify;
+    padding: 5px 5px;
+    text-decoration: none;
+    margin-top: 3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 #q1 p {
@@ -136,20 +91,14 @@ button {
   animation: zoom-in 2s ease-out infinite;
 }
 
-@keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
-
 .img-flecha {
   height: 7rem;
+}
+
+.contenedor, .contenedor-2 {
+  justify-content: center;
+  font-family: 'Roseamp', sans-serif;
+  color: $white;
 }
 
 .contenedor-2 {
@@ -159,12 +108,20 @@ button {
   align-items: center;
 }
 
+.typed-out {
+overflow: hidden;
+border-right: 2px solid $white;
+width: 0;
+animation: typing 3s steps(14) forwards,
+            blink .8s infinite;
+}
+
 .footer{
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: #000;
+  background-color: $black;
   color: white;
   text-align: center;
 }
@@ -176,6 +133,11 @@ button {
   @include boton;
 }
 
+.boton_logo {
+  border: transparent;
+  background-color: transparent;
+}
+
 .btn-neon {
   overflow: hidden;
   transition: 0.4s;
@@ -183,44 +145,51 @@ button {
 
 .btn-neon:hover {
   border: none;
-  color: #3F1C3F;
-  background-color:#a945c7;
-  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
-  0 0 80px #a945c7;
+  color: $third;
+  background-color: $primary;
+  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+  0 0 80px $primary;
 }
 
+.btn-add {
+  @include boton-add-remove;  
+}
+
+.btn-remove {
+  @include boton-add-remove;
+}
 // Botón instrucciones giratorio
 .btn-instrucciones {
-  margin-left: -12%;
-  font-size: 1rem;
-  color: #ffffff;
-  border:none;
-  box-shadow: none;
-  width: 10px;
-  height: 30px;
-  cursor: pointer;
-  line-height: 42px;
-  -webkit-perspective: 230px;
-  perspective: 230px;
-  background-color: transparent;
+  @include tam(10px, 30px);
+    margin-left: -12%;
+    font-size: 1rem;
+    color: $white;
+    border:none;
+    box-shadow: none;
+    cursor: pointer;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+    background-color: transparent; //Desaparece el blanco pero aparece el texto abajo.
 }
 
 .btn-instrucciones span {
-  background: #3F1C3F;
-  background: linear-gradient(0deg, #3F1C3F 0%, #a945c7 100%);
-  display: block;
-  position: absolute;
-  width: 125px;
-  height: 40px;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
-  border-radius: 6px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  @include tam(125px, 40px);
+    background: $third;
+    background: linear-gradient(0deg, $third 0%, $primary 100%);
+    display: block;
+    position: absolute;
+    // width: 125px;
+    // height: 40px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .btn-instrucciones span:nth-child(1) {
@@ -274,24 +243,20 @@ box-shadow:
   border: 1px solid #ffffff;
 }
 
-.btn-add {
-  @include boton-add-remove;  
-}
-
-.btn-remove {
-  @include boton-add-remove;
-}
-
 .effet::before {
-  content: '';
-  position: absolute;
-  top: 0; left:-35px;
-  width: 100%;  height: 100%; z-index: 1;
-  border-bottom:1px solid #a945c7;
-  background-color: rgba(255,255,255,0.1);
-  transition: all 0.5s;
-  opacity: 1;
-  transform: translate(37%,-2%) rotate(180deg);      
+    @include tam(100%, 100%);
+    content: '';
+    position: absolute;
+    top: 0; 
+    // width: 100%;  
+    // height: 100%;
+    z-index: 1;
+    left:-35px;
+    border-bottom:1px solid $primary;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.5s;
+    opacity: 1;
+    transform: translate(37%,-2%) rotate(180deg);      
 }
 
 .effet:hover::before { 
@@ -303,17 +268,29 @@ box-shadow:
   margin-bottom: 10%;
 }
 
-ul li.checked {
-  list-style: none;
-  color: #ffffff;
-  text-decoration: line-through;
+// Keyframes
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
 }
 
-ul li{
-  list-style: none;
-  text-align: center;
+@keyframes typing {
+  from{width: 0}
+  to{ width: 97%;}
 }
 
+@keyframes blink {
+  from{ border-color: $white}
+  to{ border-color: transparent}
+}
 //@media
 
 @media screen and (max-width:520px) {

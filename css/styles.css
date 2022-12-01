@@ -7,7 +7,7 @@
 }
 
 body {
-  background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #101016 90%);
+  background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #000000 90%);
   position: relative;
   padding-bottom: 3em;
   height: 100vh;
@@ -23,53 +23,21 @@ h1 {
   text-align: center;
 }
 
-.contenedor, .contenedor-2 {
-  justify-content: center;
-  font-family: "Roseamp", sans-serif;
+ul li {
+  list-style: none;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20%;
+}
+
+ul li.checked {
+  list-style: none;
   color: #ffffff;
+  text-decoration: line-through;
 }
 
-.typed-out {
-  overflow: hidden;
-  border-right: 2px solid #ffffff;
-  width: 0;
-  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
-          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 97%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 97%;
-  }
-}
-@-webkit-keyframes blink {
-  from {
-    border-color: #ffffff;
-  }
-  to {
-    border-color: transparent;
-  }
-}
-@keyframes blink {
-  from {
-    border-color: #ffffff;
-  }
-  to {
-    border-color: transparent;
-  }
-}
 button a {
   color: #ffffff;
   text-decoration: none;
@@ -81,11 +49,6 @@ button a:hover {
 
 #musica {
   display: none;
-}
-
-.boton_logo {
-  background-color: transparent;
-  border: transparent;
 }
 
 #q1 {
@@ -118,31 +81,14 @@ button a:hover {
           animation: zoom-in 2s ease-out infinite;
 }
 
-@-webkit-keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
-
-@keyframes zoom-in {
-  0% {
-    transform: scale(0.9, 0.9);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(0.9, 0.9);
-  }
-}
 .img-flecha {
   height: 7rem;
+}
+
+.contenedor, .contenedor-2 {
+  justify-content: center;
+  font-family: "Roseamp", sans-serif;
+  color: #ffffff;
 }
 
 .contenedor-2 {
@@ -152,12 +98,20 @@ button a:hover {
   align-items: center;
 }
 
+.typed-out {
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: #000;
+  background-color: #000000;
   color: white;
   text-align: center;
 }
@@ -167,12 +121,15 @@ button a:hover {
   padding: 2% 8%;
   margin: 2%;
   font-size: 20px;
-  font-family: "Roseamp", sans-serif;
   position: relative;
   color: white;
   background-color: #3F1C3F;
-  border-radius: 2rem;
-  font-family: "Roseamp", sans-serif;
+  border-radius: 3rem;
+}
+
+.boton_logo {
+  border: transparent;
+  background-color: transparent;
 }
 
 .btn-neon {
@@ -187,14 +144,38 @@ button a:hover {
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
 }
 
+.btn-add {
+  background-color: rgba(76, 95, 109, 0.8);
+  border: 2px solid #a945c7;
+  padding: 5px;
+  width: 100px;
+  margin-top: 10%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-remove {
+  background-color: rgba(76, 95, 109, 0.8);
+  border: 2px solid #a945c7;
+  padding: 5px;
+  width: 100px;
+  margin-top: 10%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  position: relative;
+}
+
 .btn-instrucciones {
+  width: 10px;
+  height: 30px;
   margin-left: -12%;
   font-size: 1rem;
   color: #ffffff;
   border: none;
   box-shadow: none;
-  width: 10px;
-  height: 30px;
   cursor: pointer;
   line-height: 42px;
   perspective: 230px;
@@ -202,12 +183,12 @@ button a:hover {
 }
 
 .btn-instrucciones span {
+  width: 125px;
+  height: 40px;
   background: #3F1C3F;
   background: linear-gradient(0deg, #3F1C3F 0%, #a945c7 100%);
   display: block;
   position: absolute;
-  width: 125px;
-  height: 40px;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   box-sizing: border-box;
@@ -245,38 +226,14 @@ button a:hover {
   border: 1px solid #ffffff;
 }
 
-.btn-add {
-  background-color: rgba(76, 95, 109, 0.8);
-  border: 2px solid #a945c7;
-  padding: 5px;
-  width: 100px;
-  margin-top: 10%;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  transition: all 0.5s;
-  position: relative;
-}
-
-.btn-remove {
-  background-color: rgba(76, 95, 109, 0.8);
-  border: 2px solid #a945c7;
-  padding: 5px;
-  width: 100px;
-  margin-top: 10%;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  transition: all 0.5s;
-  position: relative;
-}
-
 .effet::before {
+  width: 100%;
+  height: 100%;
   content: "";
   position: absolute;
   top: 0;
-  left: -35px;
-  width: 100%;
-  height: 100%;
   z-index: 1;
+  left: -35px;
   border-bottom: 1px solid #a945c7;
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 0.5s;
@@ -294,17 +251,61 @@ button a:hover {
   margin-bottom: 10%;
 }
 
-ul li.checked {
-  list-style: none;
-  color: #ffffff;
-  text-decoration: line-through;
+@-webkit-keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
 }
 
-ul li {
-  list-style: none;
-  text-align: center;
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
 }
-
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 97%;
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
 @media screen and (max-width: 520px) {
   .title-animation {
     margin-left: 5%;

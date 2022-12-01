@@ -1,0 +1,38 @@
+@mixin texto ($pad, $mar, $size) {
+    padding: $pad;
+    margin: $mar;
+    font-size: $size;
+  }
+  
+@mixin boton {
+    position: relative;
+    color: white;
+    background-color: #3F1C3F;
+    border-radius: 3rem;
+  }
+
+@mixin tam ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin position ($post, $index, $pt) {
+    position: $post;
+    z-index: $index;
+    padding-top: $pt;
+}
+
+@mixin boton-add-remove {
+    background-color: rgba(76, 95, 109,.8);
+    border:2px solid #a945c7;
+    padding:5px;  
+    width:100px;   
+    margin-top: 10%;
+    text-align:center;  
+    color: rgba(255,255,255,1);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+}

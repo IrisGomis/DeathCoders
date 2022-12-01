@@ -3,6 +3,24 @@ function toggle(q1) {
   if (obj.style.display == "block") obj.style.display = "none";
   else obj.style.display = "block";
 }
+
+// POPup
+const openModal = document.querySelector('.hero');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal__close');
+
+openModal.addEventListener('click', (e) =>{
+    e.preventDefault(); // Agregar parámetro para evitar comportamiento
+                        // por defecto, esto hará que no se agregue # en el enlace
+   modal.classList.add('modal--show');
+} );
+
+closeModal.addEventListener('click', (e) =>{
+    e.preventDefault(); // Agregar parámetro para evitar comportamiento
+                        // por defecto, esto hará que no se agregue # en el enlace
+   modal.classList.remove('modal--show');
+} );
+
 //Audio
 
 /*let boton = document.querySelector(".boton_logo")
