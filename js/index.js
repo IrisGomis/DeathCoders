@@ -4,7 +4,7 @@ function toggle(q1) {
   else obj.style.display = "block";
 }
 
-// POPup
+/*// POPup
 const openModal = document.querySelector('.hero');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
@@ -19,7 +19,7 @@ closeModal.addEventListener('click', (e) =>{
     e.preventDefault(); // Agregar parámetro para evitar comportamiento
                         // por defecto, esto hará que no se agregue # en el enlace
    modal.classList.remove('modal--show');
-} );
+} );*/
 
 //Audio
 
@@ -57,7 +57,7 @@ function callarAudio(){
 
 let nameCoders = arrayCoders();
 
-let myNodelist = document.getElementsByTagName("LI");
+let mylist = document.getElementsByTagName("LI"); // cambiado mynodelist por mylist
 
 function newCoder() {
   let li = document.createElement("li");
@@ -137,11 +137,11 @@ function limpiar() {
 function killCoder() {
   let deadIndex = Math.floor(Math.random() * nameCoders.length);
   const deadCoder = document.getElementById(nameCoders[deadIndex]);
-  let msj = `Coder ${nameCoders[deadIndex]} is Dead!`;
+  let warning = `Coder ${nameCoders[deadIndex]} is Dead!`; //cambiado nombre de variable
   deadCoder.remove();
   nameCoders = arrayCoders();
   return swal({
-    title: msj,
+    title: warning, // cambiado msj a warnig
     icon: "recursos/img/ducks/img-pato-parca.png",
     buttons: "Cerrar",
   });
