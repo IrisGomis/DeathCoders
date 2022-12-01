@@ -8,7 +8,21 @@
   box-sizing: border-box;
 }
 
-//   //Etiquetas
+  // Mixins
+@mixin texto ($pad, $mar, $size) {
+  padding: $pad;
+  margin: $mar;
+  font-size: $size;
+}
+
+@mixin boton {
+  position: relative;
+  color: white;
+  background-color: #3F1C3F;
+  border-radius: 3rem;
+}
+
+//Etiquetas
 
 body {
     background: $gradient;
@@ -45,6 +59,7 @@ h1 {
 }
 
 .logo-animado {
+    height: 10rem;
     animation: zoom-in 2s ease-out infinite;
 }
 
@@ -144,6 +159,17 @@ h1 {
   align-items: center;
 }
 
+button {
+  a {
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 6px;
+  }
+  a:hover  {
+      color: #3F1C3F;
+  }
+}
+
 .btn-basico {
   @include texto(2%, 2%, 30px);
   @include boton;
@@ -162,11 +188,11 @@ h1 {
   0 0 80px $primary;
 }
 
-.footer {
-  @include tam(100%, 30px);
-  position: absolute;
+.footer  {
+    @include tam(100%, 30px);
+    position: absolute;
   bottom: 0;
-  background-color: $black;
+    background-color: $black;
   color: $white;
   text-align: center;
 }
@@ -225,15 +251,14 @@ h1 {
     
     @keyframes typing {
         from{width: 0}
-        to{ width: 95%;}
+        to{ width: 100%;}
     }
 
     .img-flecha-2 {
         height: 4rem;
         margin-left: 10%;
-        margin-top: 2%;
+        margin-top: 80%;
     }
-
 }
 
 @keyframes zoom-in {
@@ -335,7 +360,7 @@ h1 {
       @include boton;
   }
 
-  .title-animation {
+  .title-animation  {
       margin-left: 27%;
   }
   
@@ -397,4 +422,74 @@ h1 {
       margin-left: 25%;
       margin-top: 1%;
   }
+}
+
+// Popup
+
+.modal1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #a760acbd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+      
+}
+.modal1__container {
+    margin: auto;
+    width: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    background-color: #fff;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.modal1__title {
+    font-size: 28px;
+}
+.modal1_parrafo {
+    margin-bottom:10px ;
+}
+.modal1__img {
+    width: 90%;
+    max-width: 300px;
+}
+
+.modal1__close {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(22, 92, 92);
+    padding: 1em 3em;
+    border:  1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .5s;
+}
+
+.modal1__close:hover {
+    color: rgb(22, 92, 92) ;
+    background-color: #fff;
+}
+
+.modal1--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
 }
