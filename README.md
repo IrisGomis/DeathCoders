@@ -2,7 +2,7 @@
 # :skull: DeathCoders :skull:
 
 ## Nuestro logo
-![](recursos/img/img-logo/logo-completo-sin-fondo.png)
+![](https://github.com/IrisGomis/DeathCoders/blob/main/logo-completo-sin-fondo.png)
 
 
 ## Colaboradoras
