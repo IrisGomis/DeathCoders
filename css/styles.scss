@@ -25,7 +25,7 @@ main {
 h1 {
   color: $white;
   font-family: 'M41_LOVEBIT', sans-serif;
-  text-align: center;
+  column-span: all;
 }  
 
 ul li {
@@ -81,18 +81,23 @@ button {
 // Clases
 
 .img-logo {
-  display: flex;
-  justify-content: center;
-  height: 10rem;
+  margin-top: 5%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .logo-animado {
-  height: 10rem;
-  animation: zoom-in 2s ease-out infinite;
+  animation: zoom-in 2s ease-out infinite;  
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center;
+  width: 30vw;
 }
 
-.img-flecha {
-  height: 7rem;
+.title-animation {
+  display: grid;
+  width: 100vw;
 }
 
 .contenedor, .contenedor-2 {
@@ -109,10 +114,12 @@ button {
 }
 
 .typed-out {
-overflow: hidden;
-border-right: 2px solid $white;
-width: 0;
-animation: typing 3s steps(14) forwards,
+  justify-self: center;
+  font-size: 2.9vw;
+  overflow: hidden;
+  border-right: 2px solid $white;
+  width: 0;
+  animation: typing 3s steps(14) forwards,
             blink .8s infinite;
 }
 
@@ -284,7 +291,7 @@ box-shadow:
 
 @keyframes typing {
   from{width: 0}
-  to{ width: 97%;}
+  to{ width: 36%;}
 }
 
 @keyframes blink {
@@ -292,7 +299,7 @@ box-shadow:
   to{ border-color: transparent}
 }
 //@media
-
+/*
 @media screen and (max-width:520px) {
 
   .title-animation {
@@ -389,7 +396,7 @@ box-shadow:
     font-size: 12px;
     width: 15rem;
   }
-}
+}*/
 
 .swal-modal {
   background-color:rgb(142, 153, 160);

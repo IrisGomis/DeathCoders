@@ -46,25 +46,28 @@ body {
 h1 {
   color: #ffffff;
   font-family: 'M41_LOVEBIT', sans-serif;
-  font-size: 2vw;
+
   column-span: all;
 }
 
 .title-animation {
-  margin-left: 5%;
+  display: grid;
+  width: 100vw;
 }
 
 .typed-out {
-overflow: hidden;
-border-right: 2px solid #ffffff;
-width: 0;
-animation: typing 3s steps(14) forwards,
-            blink .8s infinite;
+  font-size: 2.9vw;
+  justify-self: center;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  animation: typing 3s steps(14) forwards,
+              blink .8s infinite;
 }
 
 @keyframes typing {
   from{width: 0}
-  to{ width: 35%;}
+  to{ width: 36%;}
 }
 
 @keyframes blink {
@@ -216,8 +219,8 @@ animation: typing 3s steps(14) forwards,
 }
 
 .btn-basico {
-@include texto(3%, 3%, 20px);
-@include boton;
+  @include texto(3%, 3%, 20px);
+  @include boton;
 }
 
 button {
@@ -231,32 +234,18 @@ button {
   }
 }
 
-.btn-basico {
-  @include texto(2%,2%, 3vw);
-  @include boton;
-}
 .btn-neon {
-overflow: hidden;
-transition: 0.4s;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
 .btn-neon:hover {
-border: none;
-color: $third;
-background-color:$primary;
-box-shadow: 0 0 10px $primary, 0 0 40px $primary,
-0 0 80px $primary;
+  border: none;
+  color: $third;
+  background-color: $primary;
+  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+  0 0 80px $primary;
 }
-
-.footer {
-@include tam(100%, 30px);
-position: absolute;
-bottom: 0;
-background-color: $black;
-color: $white;
-text-align: center;
-}
-
 
 .img-flecha-2{
   width: 15vw;
