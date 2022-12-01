@@ -10,65 +10,21 @@ body {
   position: relative;
   padding-bottom: 3em;
   height: 100vh;
+  width: 100vw;
 }
 
-h1 {
-  color: #ffffff;
-  font-family: "M41_LOVEBIT", sans-serif;
-}
-
-.title-animation {
-  margin-left: 5%;
-}
-
-.typed-out {
-  overflow: hidden;
-  border-right: 2px solid #ffffff;
-  width: 0;
-  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
-          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 97%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 97%;
-  }
-}
-@-webkit-keyframes blink {
-  from {
-    border-color: #ffffff;
-  }
-  to {
-    border-color: transparent;
-  }
-}
-@keyframes blink {
-  from {
-    border-color: #ffffff;
-  }
-  to {
-    border-color: transparent;
-  }
-}
 .img-logo {
-  display: flex;
-  justify-content: center;
-  height: 10rem;
+  margin-top: 5%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .logo-animado {
+  width: 30vw;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center;
   -webkit-animation: zoom-in 2s ease-out infinite;
           animation: zoom-in 2s ease-out infinite;
 }
@@ -96,150 +52,177 @@ h1 {
     transform: scale(0.9, 0.9);
   }
 }
-.cursor-mira {
-  cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
+h1 {
+  color: #ffffff;
+  font-family: "M41_LOVEBIT", sans-serif;
+  font-size: 2.9vw;
+  -moz-column-span: all;
+       column-span: all;
 }
 
-/*.contenedor-marco{
+.title-animation {
   display: grid;
-  grid-template-rows: 15vh 15vh 15vh 15vh;
-  grid-template-columns: 33% 33% 33%;
-}*/
-.ventana {
-  z-index: 50;
-  position: absolute;
-  width: 100%;
-  display: block;
-  top: 12rem;
-  padding-left: 8%;
-  padding-right: 8%;
+  width: 100vw;
+}
+
+.typed-out {
+  justify-self: center;
   overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  -webkit-animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+          animation: typing 3s steps(14) forwards, blink 0.8s infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+@-webkit-keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: #ffffff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+.contenedor-ventana {
+  display: grid;
+  grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.ventana {
+  width: 95vw;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  justify-self: center;
+  position: static;
+  z-index: 20;
 }
 
 .cielo {
+  width: 70vw;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-self: center;
+  align-self: center;
   position: absolute;
-  z-index: 1;
-  width: 90%;
-  padding-right: 14%;
-  padding-left: 14%;
-  padding-top: 8%;
-  padding-bottom: 8%;
 }
 
 .estanque {
+  width: 70vw;
+  margin-top: 16%;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-self: center;
   position: absolute;
-  z-index: 3;
-  width: 100%;
-  padding-right: 20%;
-  padding-left: 20%;
-  padding-top: 13%;
+  z-index: 2;
 }
 
 .pato-1 {
-  padding-top: 30%;
-  z-index: 5;
+  width: 8vw;
+  margin-top: 35%;
   position: absolute;
-  -webkit-animation: pato1 30s infinite;
-          animation: pato1 30s infinite;
-}
-
-.pato1 {
-  width: 8%;
-  height: 8%;
+  z-index: 5;
+  -webkit-animation: movimiento-pato1 35s infinite;
+          animation: movimiento-pato1 35s infinite;
 }
 
 .pato-2 {
-  padding-top: 40%;
-  z-index: 4;
+  width: 8vw;
+  margin-top: 45%;
   position: absolute;
-  -webkit-animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-          animation: pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
-
-.pato2 {
-  width: 8%;
-  height: 8%;
+  z-index: 4;
+  -webkit-animation: movimiento-pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          animation: movimiento-pato2 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 
 .pato-3 {
-  padding-top: 31%;
-  z-index: 4;
+  width: 8vw;
+  margin-top: 36%;
   position: absolute;
-  -webkit-animation: pato1 15s infinite;
-          animation: pato1 15s infinite;
-}
-
-.pato3 {
-  width: 8%;
-  height: 8%;
+  z-index: 5;
+  -webkit-animation: movimiento-pato1 15s infinite;
+          animation: movimiento-pato1 15s infinite;
 }
 
 .pato-4 {
-  padding-top: 12%;
-  z-index: 5;
+  width: 6vw;
+  margin-top: 35%;
   position: absolute;
-  -webkit-animation: pato2 10s infinite ease-in-out;
-          animation: pato2 10s infinite ease-in-out;
-}
-
-.pato4 {
-  width: 8%;
-  height: 8%;
+  z-index: 4;
+  -webkit-animation: movimiento-pato1 10s infinite;
+          animation: movimiento-pato1 10s infinite;
 }
 
 .pato-5 {
-  padding-top: 29%;
-  z-index: 3;
+  width: 6vw;
+  margin-top: 35%;
   position: absolute;
-  -webkit-animation: pato3 17s infinite ease-in-out;
-          animation: pato3 17s infinite ease-in-out;
-}
-
-.pato5 {
-  width: 8%;
-  height: 8%;
+  z-index: 4;
+  -webkit-animation: movimiento-pato1 40s infinite;
+          animation: movimiento-pato1 40s infinite;
 }
 
 .pato-6 {
-  padding-top: 34%;
-  z-index: 4;
+  width: 5vw;
+  margin-top: 34%;
   position: absolute;
-  -webkit-animation: pato1 40s infinite ease-in-out;
-          animation: pato1 40s infinite ease-in-out;
-}
-
-.pato6 {
-  width: 8%;
-  height: 8%;
+  z-index: 3;
+  -webkit-animation: movimiento-pato3 20s infinite;
+          animation: movimiento-pato3 20s infinite;
 }
 
 .pato-7 {
-  padding-top: 19%;
-  z-index: 2;
+  width: 8vw;
+  margin-top: 37%;
   position: absolute;
-  -webkit-animation: pato1 5s infinite ease-in-out;
-          animation: pato1 5s infinite ease-in-out;
-}
-
-.pato7 {
-  width: 8%;
-  height: 8%;
+  z-index: 5;
+  -webkit-animation: movimiento-pato1 60s infinite;
+          animation: movimiento-pato1 60s infinite;
 }
 
 .pato-8 {
-  padding-top: 31%;
-  z-index: 5;
+  width: 4vw;
+  margin-top: 25%;
   position: absolute;
-  -webkit-animation: pato1 20s infinite;
-          animation: pato1 20s infinite;
+  z-index: 1;
+  -webkit-animation: movimiento-pato1 6s infinite;
+          animation: movimiento-pato1 6s infinite;
 }
 
-.pato8 {
-  width: 8%;
-  height: 8%;
+.pato-9 {
+  width: 5vw;
+  margin-top: 15%;
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: movimiento-pato2 60s infinite;
+          animation: movimiento-pato2 60s infinite;
 }
 
-@-webkit-keyframes pato1 {
+@-webkit-keyframes movimiento-pato1 {
   from {
     left: 80%;
   }
@@ -248,7 +231,7 @@ h1 {
   }
 }
 
-@keyframes pato1 {
+@keyframes movimiento-pato1 {
   from {
     left: 80%;
   }
@@ -256,7 +239,7 @@ h1 {
     left: 10%;
   }
 }
-@-webkit-keyframes pato2 {
+@-webkit-keyframes movimiento-pato2 {
   from {
     left: 15%;
   }
@@ -264,7 +247,7 @@ h1 {
     left: 80%;
   }
 }
-@keyframes pato2 {
+@keyframes movimiento-pato2 {
   from {
     left: 15%;
   }
@@ -272,7 +255,7 @@ h1 {
     left: 80%;
   }
 }
-@-webkit-keyframes pato3 {
+@-webkit-keyframes movimiento-pato3 {
   from {
     left: 15%;
   }
@@ -280,7 +263,7 @@ h1 {
     left: 47%;
   }
 }
-@keyframes pato3 {
+@keyframes movimiento-pato3 {
   from {
     left: 15%;
   }
@@ -289,9 +272,10 @@ h1 {
   }
 }
 .btn-reinicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 100%;
+  position: relative;
 }
 
 button a {
@@ -356,7 +340,7 @@ button a:hover {
   }
 }
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 30px;
@@ -376,9 +360,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 5%;
-  }
+  /*.title-animation {
+      margin-left: 5%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -412,9 +396,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 15%;
-  }
+  /*.title-animation {
+      margin-left: 15%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -448,9 +432,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 25%;
-  }
+  /*.title-animation {
+      margin-left: 25%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -474,9 +458,9 @@ button a:hover {
   }
 }
 @media only screen and (min-width: 821px) and (max-width: 992px) {
-  .title-animation {
-    margin-left: 25%;
-  }
+  /*.title-animation {
+      margin-left: 25%;
+  }*/
   .btn-basico {
     margin-top: 15%;
     padding: 2%;
@@ -487,9 +471,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 25%;
-  }
+  /*.title-animation {
+      margin-left: 25%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -523,9 +507,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 27%;
-  }
+  /*.title-animation {
+      margin-left: 27%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -559,9 +543,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: -30%;
-  }
+  /*.title-animation{
+      margin-left: -30%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
@@ -595,9 +579,9 @@ button a:hover {
     background-color: #3F1C3F;
     border-radius: 3rem;
   }
-  .title-animation {
-    margin-left: 35%;
-  }
+  /*.title-animation {
+      margin-left: 35%;
+  }*/
   @-webkit-keyframes typing {
     from {
       width: 0;
