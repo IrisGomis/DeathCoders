@@ -1,12 +1,12 @@
-  @import url('https://fonts.cdnfonts.com/css/m41-lovebit');
+@import url('https://fonts.cdnfonts.com/css/m41-lovebit');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  // Mixins
+// Mixins
 @mixin texto ($pad, $mar, $size) {
   padding: $pad;
   margin: $mar;
@@ -20,18 +20,17 @@
   border-radius: 3rem;
 }
 
-
-  //Etiquetas
+//Etiquetas
 
 body {
-    background: -webkit-linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90% );
-    position: relative;
-    padding-bottom: 3em;
-    height: 100vh;
-    width: 100vw;
+  background: linear-gradient(90deg, #242C56 1%,#765F9C 20%, #3F1C3F 70%, #101016 90%);
+  position: relative;
+  padding-bottom: 3em;
+  height: 100vh;
+  width: 100vw;
 }
 
-.img-logo {
+.img-logo{
   margin-top: 5%;
   display: grid;
   grid-template-rows: 100%;
@@ -39,11 +38,11 @@ body {
 }
 
 .logo-animado {
-  width: 30vw;
+  animation: zoom-in 2s ease-out infinite;  
   grid-column-start: 2;
   grid-column-end: 3;
   justify-self: center;
-  animation: zoom-in 2s ease-out infinite;
+  width: 30vw;
 }
 
 @keyframes zoom-in {
@@ -61,9 +60,9 @@ body {
 h1 {
   color: #ffffff;
   font-family: 'M41_LOVEBIT', sans-serif;
-  font-size: 2.9vw;
+  font-size: 2vw;
   column-span: all;
-}  
+}
 
 .title-animation {
   display: grid;
@@ -81,17 +80,13 @@ h1 {
 
 @keyframes typing {
   from{width: 0}
-  to{ width: 36%;}
+  to{ width: 35%;}
 }
 
 @keyframes blink {
   from{ border-color: #ffffff}
   to{ border-color: transparent}
 }
-
-//.cursor-mira {
-//  cursor: url(/recursos/img/img-cursor/cursor-mira-telescopica.png), pointer;
-//}
 
 .contenedor-ventana {
   display: grid;
@@ -237,18 +232,18 @@ h1 {
 }
 
 button {
-  a {
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: 6px;
+  a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 6px;
   }
-  a:hover  {
-      color: #3F1C3F;
+  a:hover {
+    color: #3F1C3F;
   }
 }
 
 .btn-basico {
-  @include texto(2%, 2%, 30px);
+  @include texto(2%,2%, 3vw);
   @include boton;
 }
 
@@ -257,17 +252,17 @@ button {
   transition: 0.4s;
 }
 
-.btn-neon:hover {
+btn-neon:hover {
   border: none;
   color: #3F1C3F;
-  background-color:#a945c7;
+  background-color: #a945c7;
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7,
   0 0 80px #a945c7;
 }
 
-.img-flecha-2{
-  height: 3rem;
-  margin-left: 5%;
+.img-flecha-2 {
+  width: 15vw;
+  margin-left: 20%;
   animation: blink-2 0.5s infinite;
 }
 
@@ -281,13 +276,13 @@ button {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 30px;
+  height: 40px;
   background-color: #000;
   color: white;
   text-align: center;
 }
-/*
-@media screen and (max-width:520px) {
+
+/*@media screen and (max-width:520px) {
     
     .btn-basico {
         margin-top: 10%;
@@ -295,9 +290,9 @@ button {
         @include boton;
     }
 
-    //.title-animation {
-    //    margin-left: 5%;
-    //}
+    .title-animation {
+        margin-left: 5%;
+    }
     
     @keyframes typing {
         from{width: 0}
@@ -309,6 +304,7 @@ button {
         margin-left: 10%;
         margin-top: 2%;
     }
+
 }
 
 @media only screen and (min-width:521px) and (max-width:720px) {
@@ -319,9 +315,9 @@ button {
       @include boton;
   }
 
-  //.title-animation {
-  //    margin-left: 15%;
-  //}
+  .title-animation {
+      margin-left: 15%;
+  }
 
   @keyframes typing {
       from{width: 0}
@@ -343,9 +339,9 @@ button {
       @include boton;
   }
 
-  //.title-animation {
-  //    margin-left: 25%;
-  //}
+  .title-animation {
+      margin-left: 25%;
+  }
 
   @keyframes typing {
       from{width: 0}
@@ -361,9 +357,9 @@ button {
 
 @media only screen and (min-width:821px) and (max-width:992px) {
 
-  //.title-animation {
-  //    margin-left: 25%;
-  //}
+  .title-animation {
+      margin-left: 25%;
+  }
 
   .btn-basico {
       margin-top: 15%;
@@ -371,9 +367,9 @@ button {
       @include boton;
   }
 
-  //.title-animation {
-  //    margin-left: 25%;
-  //}
+  .title-animation {
+      margin-left: 25%;
+  }
 
   @keyframes typing {
       from{width: 0}
@@ -395,9 +391,9 @@ button {
       @include boton;
   }
 
-  //.title-animation {
-  //    margin-left: 27%;
-  //}
+  .title-animation {
+      margin-left: 27%;
+  }
   
   @keyframes typing {
       from{width: 0}
@@ -419,9 +415,9 @@ button {
       @include boton;
   }
 
-  //.title-animation{
-  //    margin-left: -30%;
-  //}
+  .title-animation{
+      margin-left: -30%;
+  }
   
   @keyframes typing {
       from{width: 0}
@@ -443,9 +439,9 @@ button {
       @include boton;
   }
 
- //.title-animation {
-  //    margin-left: 35%;
-  //}
+  .title-animation {
+      margin-left: 35%;
+  }
 
   @keyframes typing {
       from{width: 0}
@@ -457,4 +453,5 @@ button {
       margin-left: 25%;
       margin-top: 1%;
   }
-}
+}*/
+
