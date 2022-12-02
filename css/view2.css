@@ -350,42 +350,6 @@ button a:hover {
   text-align: center;
 }
 
-/*
-@media only screen and (min-width:521px) and (max-width:720px) {
-
-  .footer{
-    margin-top: 100%;
-  }
-}
-
-@media only screen and (min-width:721px) and (max-width:820px) {
-
-  body{
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width:821px) and (max-width:992px) {
-
-  body{
-    height: 100vh;
-  }
-}
-
-@media only screen and (min-width:993px) {
-
-  body {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width:1025) {
-
-}
-
-@media screen and (min-width:1200px) {
-
-}*/
 .swal-overlay {
   background-color: rgba(63, 28, 63, 0.7607843137);
 }
@@ -396,4 +360,13 @@ button a:hover {
 
 .swal-button {
   background-color: #3F1C3F;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    height: 100%;
+  }
+  .btn-reinicio {
+    grid-template-rows: 60%;
+  }
 }/*# sourceMappingURL=view2.css.map */

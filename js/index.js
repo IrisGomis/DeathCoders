@@ -6,25 +6,25 @@ function toggle(q1) {
   else obj.style.display = "block";
 }
 
-window.addEventListener("load",function(){
-	document.getElementById("play").addEventListener("click",sonarAudio);
-	document.getElementById("stop").addEventListener("click",callarAudio);			
+window.addEventListener("load", function () {
+  document.getElementById("play").addEventListener("click", sonarAudio);
+  document.getElementById("stop").addEventListener("click", callarAudio);
 });
 
-function sonarAudio(){
-	let sonido = document.createElement("iframe");
-	sonido.setAttribute("src","recursos/audio/suspense.mp3");
-	document.body.appendChild(sonido);
-	document.getElementById("play").removeEventListener("click",sonarPajaros);
+function sonarAudio() {
+  let sonido = document.createElement("iframe");
+  sonido.setAttribute("src", "recursos/audio/suspense.mp3");
+  document.body.appendChild(sonido);
+  document.getElementById("play").removeEventListener("click", sonarPajaros);
 }
 
-function callarAudio(){
-	var iframe = document.getElementsByTagName("iframe");
+function callarAudio() {
+  var iframe = document.getElementsByTagName("iframe");
 
-	if (iframe.length > 0){
-		iframe[0].parentNode.removeChild(iframe[0]);
-		document.getElementById("play").addEventListener("click",sonarPajaros);
-	}
+  if (iframe.length > 0) {
+    iframe[0].parentNode.removeChild(iframe[0]);
+    document.getElementById("play").addEventListener("click", sonarPajaros);
+  }
 }
 
 // Lista de nombres
@@ -58,15 +58,13 @@ function newCoder() {
   document.getElementById("participants").value = "";
 }
 
-var list = document.querySelector("ul");
-list.addEventListener("click",function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
-      nameCoders = arrayCoders();
-    }
-  },
-  false
-);
+let list = document.querySelector("ul");
+list.addEventListener("click", function (ev) {
+  if (ev.target.tagName === "LI") {
+    ev.target.classList.toggle("checked");
+    nameCoders = arrayCoders();
+  }
+}, false);
 
 function eliminarNombre() {
   const eliminar = document.getElementsByClassName("checked");
@@ -106,24 +104,12 @@ function limpiar() {
 }
 //-------------------------
 
-/*function killCoder() {
-  let deadIndex = Math.floor(Math.random() * nameCoders.length);
-  const deadCoder = document.getElementById(nameCoders[deadIndex]);
-  let warning = `Coder ${nameCoders[deadIndex]} is Dead!`; //cambiado nombre de variable
-  deadCoder.remove();
-  nameCoders = arrayCoders();
-  return swal({
-    title: warning, // cambiado msj a warnig
-    icon: "recursos/img/ducks/img-pato-parca.png",
-    buttons: "Cerrar",
-  });
-}*/
 
 function killCoder() {
   let msj = "";
-  temp = 5000;
+  temp = 7000;
   for (let i = 0; i < localStorage.length; i++) {
-      array2.push(localStorage.getItem(`${i}`));
+    array2.push(localStorage.getItem(`${i}`));
   }
   console.log(localStorage.length);
   console.log(array2.length);
@@ -133,20 +119,25 @@ function killCoder() {
   let deadIndex = Math.floor(Math.random() * array2.length);
   let dead = array2[`${deadIndex}`];
   if (array2.length == 1) {
-      temp = 0;
-      swal(`Coder ${array2[0]} is Win!`);
-      return
-  } else if (array2.length > 1) {
-      array2.splice(deadIndex, 1);
-      msj = `Coder ${dead} is Dead!`;
-    }
-
-  setTimeout(function () {
+    temp = 0;
     swal({
-      title: msj,
+      title: `Coder ${array2[0]} is Win!`,
+      tex: " ",
+      icon: "recursos/img/ducks/img-pato-ganador.png",
+      buttons: "Cerrar",
+    });
+    return
+  } else if (array2.length > 1) {
+    array2.splice(deadIndex, 1);
+    swal({
+      title: `Coder ${dead} is Dead!`,
+      text: " " ,
       icon: "recursos/img/ducks/img-pato-parca.png",
       buttons: "Cerrar",
     });
+  }
+
+  setTimeout(function () {
     killCoder();
   }, temp);
 }
@@ -155,7 +146,7 @@ function setlocalStorage() {
   let coderKey = new Map();
 
   for (let i = 0; i < nameCoders.length; i++) {
-      coderKey.set(i, nameCoders[i]);
-      localStorage.setItem(`${i}`, nameCoders[i]);
+    coderKey.set(i, nameCoders[i]);
+    localStorage.setItem(`${i}`, nameCoders[i]);
   }
 }
