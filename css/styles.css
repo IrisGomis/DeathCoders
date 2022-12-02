@@ -9,11 +9,15 @@
 body {
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #000000 90%);
   position: relative;
-  padding-bottom: 3em;
+  width: 100vw;
   height: 100vh;
 }
 
 main {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50% 50%;
   text-align: center;
 }
 
@@ -24,13 +28,17 @@ h1 {
        column-span: all;
 }
 
-ul li {
-  list-style: none;
+.titulo-2 {
   text-align: center;
 }
 
-h3 {
-  margin-top: 20%;
+.titulo-3 {
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  text-align: center;
 }
 
 ul li.checked {
@@ -91,17 +99,21 @@ button a:hover {
   width: 100vw;
 }
 
-.contenedor, .contenedor-2 {
-  justify-content: center;
+.contenedor {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: center;
   font-family: "Roseamp", sans-serif;
   color: #ffffff;
 }
 
 .contenedor-2 {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-family: "Roseamp", sans-serif;
+  color: #ffffff;
 }
 
 .typed-out {
@@ -115,7 +127,9 @@ button a:hover {
 }
 
 .footer {
-  position: absolute;
+  display: grid;
+  grid-row-end: 5;
+  margin-top: 10vh;
   bottom: 0;
   width: 100%;
   height: 30px;
@@ -133,6 +147,7 @@ button a:hover {
   color: white;
   background-color: #3F1C3F;
   border-radius: 3rem;
+  align-self: center;
 }
 
 .boton_logo {
@@ -150,6 +165,10 @@ button a:hover {
   color: #3F1C3F;
   background-color: #a945c7;
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+}
+
+.boton-add-y-rem {
+  position: static;
 }
 
 .btn-add {
@@ -176,10 +195,13 @@ button a:hover {
   position: relative;
 }
 
+.boton-inst {
+  margin-right: 23%;
+}
+
 .btn-instrucciones {
   width: 10px;
   height: 30px;
-  margin-left: -12%;
   font-size: 1rem;
   color: #ffffff;
   border: none;
@@ -225,9 +247,12 @@ button a:hover {
   transform: rotateX(-90deg);
 }
 
-.list {
-  margin-top: -10%;
+.inp-list {
+  display: flex;
   justify-content: center;
+}
+
+.list {
   text-align: center;
   border-radius: 20px;
   background-color: #EEBAF9;
@@ -255,8 +280,7 @@ button a:hover {
 }
 
 .subtitle-game {
-  margin-top: 25%;
-  margin-bottom: 10%;
+  text-align: center;
 }
 
 @-webkit-keyframes zoom-in {
@@ -314,104 +338,15 @@ button a:hover {
     border-color: transparent;
   }
 }
-/*
-@media screen and (max-width:520px) {
-
-  .title-animation {
-    margin-left: 5%;
+@media screen and (min-width: 1200px) {
+  body {
+    height: 100%;
   }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 98%;}
-  }
-
-  .btn-basico {
-    font-size: 1rem;
-  }
-
-}
-
-@media only screen and (min-width:521px) and (max-width:720px) {
-
-  .title-animation {
-    margin-left: 18%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 92%;}
-  }
-}
-
-@media only screen and (min-width:721px) and (max-width:820px) {
-
-  .title-animation {
-    margin-left: 23%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 72%;}
-  }
-}
-
-@media only screen and (min-width:821px) and (max-width:992px) {
-
-  .title-animation {
-    margin-left: 25%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 69%;}
-  } 
-}
-
-@media only screen and (min-width:993px) and (max-width:1024) {
-
-  .title-animation {
-    margin-left: 25%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 73%;}
-  }
-}
-
-@media screen and (min-width:1025px) {
-
-  .title-animation {
-    margin-left: 27%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 63%;}
-  }
-}
-
-@media screen and (min-width:1200px) {
-
-  .title-animation {
-    margin-left: 34%;
-  }
-
-  @keyframes typing {
-    from{width: 0}
-    to{ width: 50%;}
-  }
-
-  .btn-instrucciones {
-    margin-left: -7%;
-  }
-
   #q1 {
     font-size: 12px;
     width: 15rem;
   }
-}*/
+}
 .swal-modal {
   background-color: rgb(142, 153, 160);
   border: 1px solid #ffffff;
@@ -430,9 +365,8 @@ button a:hover {
 }
 
 .btn-audio {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  grid-column-start: 2;
+  padding: 10%;
 }
 
 .btn-audio-play, .btn-audio-stop {
