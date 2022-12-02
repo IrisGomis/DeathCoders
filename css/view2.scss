@@ -11,7 +11,7 @@
 body {
   background: $gradient;
   position: relative;
-  padding-bottom: 3em;
+  //padding-bottom: 3em;
   height: 100vh;
   width: 100vw;
 }
@@ -46,20 +46,23 @@ body {
 h1 {
   color: #ffffff;
   font-family: 'M41_LOVEBIT', sans-serif;
-  font-size: 2vw;
+
   column-span: all;
 }
 
-/*.title-animation {
-  margin-left: 5%;
-}*/
+.title-animation {
+  display: grid;
+  width: 100vw;
+}
 
 .typed-out {
-overflow: hidden;
-border-right: 2px solid #ffffff;
-width: 0;
-animation: typing 3s steps(14) forwards,
-            blink .8s infinite;
+  font-size: 2.9vw;
+  justify-self: center;
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  animation: typing 3s steps(14) forwards,
+              blink .8s infinite;
 }
 
 @keyframes typing {
@@ -209,15 +212,14 @@ animation: typing 3s steps(14) forwards,
 
 .btn-reinicio {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 40%;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 100%;
   position: relative;
-  margin-top: 50%;
 }
 
 .btn-basico {
-@include texto(3%, 3%, 20px);
-@include boton;
+  @include texto(3%, 3%, 20px);
+  @include boton;
 }
 
 button {
@@ -231,32 +233,18 @@ button {
   }
 }
 
-.btn-basico {
-  @include texto(2%,2%, 3vw);
-  @include boton;
-}
 .btn-neon {
-overflow: hidden;
-transition: 0.4s;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
 .btn-neon:hover {
-border: none;
-color: $third;
-background-color:$primary;
-box-shadow: 0 0 10px $primary, 0 0 40px $primary,
-0 0 80px $primary;
+  border: none;
+  color: $third;
+  background-color: $primary;
+  box-shadow: 0 0 10px $primary, 0 0 40px $primary,
+  0 0 80px $primary;
 }
-
-.footer {
-@include tam(100%, 30px);
-position: absolute;
-bottom: 0;
-background-color: $black;
-color: $white;
-text-align: center;
-}
-
 
 .img-flecha-2{
   width: 15vw;
@@ -272,17 +260,21 @@ text-align: center;
 
 .footer {
   @include tam(100%, 30px);
-  position: relative;
+  position: absolute;
   bottom: 0;
   background-color: $black;
   color: $white;
   text-align: center;
+  //margin-top: 57%
 }
 
-/*
 
+/*
 @media only screen and (min-width:521px) and (max-width:720px) {
-  
+ 
+  .footer{
+    margin-top: 100%;
+  }
 }
 
 @media only screen and (min-width:721px) and (max-width:820px) {
@@ -312,4 +304,16 @@ text-align: center;
 
 @media screen and (min-width:1200px) {
 
+}*/
+
+.swal-overlay {
+  background-color: #3f1c3fc2;
+}
+
+.swal-text {
+  color: #ffffff;
+}
+
+.swal-button {
+  background-color: #3F1C3F;
 }

@@ -9,7 +9,6 @@
 body {
   background: -webkit-linear-gradient(90deg, #242C56 1%, #765F9C 20%, #3F1C3F 70%, #000000 90%);
   position: relative;
-  padding-bottom: 3em;
   height: 100vh;
 }
 
@@ -20,7 +19,8 @@ main {
 h1 {
   color: #ffffff;
   font-family: "M41_LOVEBIT", sans-serif;
-  text-align: center;
+  -moz-column-span: all;
+       column-span: all;
 }
 
 ul li {
@@ -70,19 +70,24 @@ button a:hover {
 }
 
 .img-logo {
-  display: flex;
-  justify-content: center;
-  height: 10rem;
+  margin-top: 5%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .logo-animado {
-  height: 10rem;
   -webkit-animation: zoom-in 2s ease-out infinite;
           animation: zoom-in 2s ease-out infinite;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: center;
+  width: 30vw;
 }
 
-.img-flecha {
-  height: 7rem;
+.title-animation {
+  display: grid;
+  width: 100vw;
 }
 
 .contenedor, .contenedor-2 {
@@ -99,6 +104,8 @@ button a:hover {
 }
 
 .typed-out {
+  justify-self: center;
+  font-size: 2.9vw;
   overflow: hidden;
   border-right: 2px solid #ffffff;
   width: 0;
@@ -110,7 +117,7 @@ button a:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 30px;
+  height: 5%;
   background-color: #000000;
   color: white;
   text-align: center;
@@ -279,7 +286,7 @@ button a:hover {
     width: 0;
   }
   to {
-    width: 97%;
+    width: 36%;
   }
 }
 @keyframes typing {
@@ -287,7 +294,7 @@ button a:hover {
     width: 0;
   }
   to {
-    width: 97%;
+    width: 36%;
   }
 }
 @-webkit-keyframes blink {
@@ -306,163 +313,104 @@ button a:hover {
     border-color: transparent;
   }
 }
-@media screen and (max-width: 520px) {
+/*
+@media screen and (max-width:520px) {
+
   .title-animation {
     margin-left: 5%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 98%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 98%;
-    }
+    from{width: 0}
+    to{ width: 98%;}
   }
+
   .btn-basico {
     font-size: 1rem;
   }
+
 }
-@media only screen and (min-width: 521px) and (max-width: 720px) {
+
+@media only screen and (min-width:521px) and (max-width:720px) {
+
   .title-animation {
     margin-left: 18%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 92%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 92%;
-    }
+    from{width: 0}
+    to{ width: 92%;}
   }
 }
-@media only screen and (min-width: 721px) and (max-width: 820px) {
+
+@media only screen and (min-width:721px) and (max-width:820px) {
+
   .title-animation {
     margin-left: 23%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 72%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 72%;
-    }
+    from{width: 0}
+    to{ width: 72%;}
   }
 }
-@media only screen and (min-width: 821px) and (max-width: 992px) {
+
+@media only screen and (min-width:821px) and (max-width:992px) {
+
   .title-animation {
     margin-left: 25%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 69%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 69%;
-    }
-  }
+    from{width: 0}
+    to{ width: 69%;}
+  } 
 }
-@media only screen and (min-width: 993px) and (max-width: 1024) {
+
+@media only screen and (min-width:993px) and (max-width:1024) {
+
   .title-animation {
     margin-left: 25%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 73%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 73%;
-    }
+    from{width: 0}
+    to{ width: 73%;}
   }
 }
-@media screen and (min-width: 1025px) {
+
+@media screen and (min-width:1025px) {
+
   .title-animation {
     margin-left: 27%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 63%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 63%;
-    }
+    from{width: 0}
+    to{ width: 63%;}
   }
 }
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width:1200px) {
+
   .title-animation {
     margin-left: 34%;
   }
-  @-webkit-keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 50%;
-    }
-  }
+
   @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 50%;
-    }
+    from{width: 0}
+    to{ width: 50%;}
   }
+
   .btn-instrucciones {
     margin-left: -7%;
   }
+
   #q1 {
     font-size: 12px;
     width: 15rem;
   }
-}
+}*/
 .swal-modal {
   background-color: rgb(142, 153, 160);
   border: 1px solid #ffffff;

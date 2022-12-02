@@ -1,36 +1,10 @@
+let array2 = [];
+
 function toggle(q1) {
   let obj = document.getElementById(q1);
   if (obj.style.display == "block") obj.style.display = "none";
   else obj.style.display = "block";
 }
-
-/*// POPup
-const openModal = document.querySelector('.hero');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal__close');
-
-openModal.addEventListener('click', (e) =>{
-    e.preventDefault(); // Agregar parámetro para evitar comportamiento
-                        // por defecto, esto hará que no se agregue # en el enlace
-   modal.classList.add('modal--show');
-} );
-
-closeModal.addEventListener('click', (e) =>{
-    e.preventDefault(); // Agregar parámetro para evitar comportamiento
-                        // por defecto, esto hará que no se agregue # en el enlace
-   modal.classList.remove('modal--show');
-} );*/
-
-//Audio
-
-/*let boton = document.querySelector(".boton_logo")
-
-    boton.addEventListener("click", () => {
-      let etiquetaAudio = document.createElement("audio")
-      etiquetaAudio.setAttribute("src", "../recursos/audio/suspense.mp3")
-      etiquetaAudio.play()
-    })
-*/
 
 window.addEventListener("load",function(){
 	document.getElementById("play").addEventListener("click",sonarAudio);
@@ -85,9 +59,7 @@ function newCoder() {
 }
 
 var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  function (ev) {
+list.addEventListener("click",function (ev) {
     if (ev.target.tagName === "LI") {
       ev.target.classList.toggle("checked");
       nameCoders = arrayCoders();
@@ -128,13 +100,13 @@ function minusculaMayuscula(name) {
   return name;
 }
 
-// recarga la pagina para limpiar todo
+
 function limpiar() {
   document.location.reload();
 }
 //-------------------------
 
-function killCoder() {
+/*function killCoder() {
   let deadIndex = Math.floor(Math.random() * nameCoders.length);
   const deadCoder = document.getElementById(nameCoders[deadIndex]);
   let warning = `Coder ${nameCoders[deadIndex]} is Dead!`; //cambiado nombre de variable
@@ -145,4 +117,45 @@ function killCoder() {
     icon: "recursos/img/ducks/img-pato-parca.png",
     buttons: "Cerrar",
   });
+}*/
+
+function killCoder() {
+  let msj = "";
+  temp = 5000;
+  for (let i = 0; i < localStorage.length; i++) {
+      array2.push(localStorage.getItem(`${i}`));
+  }
+  console.log(localStorage.length);
+  console.log(array2.length);
+
+  localStorage.clear();
+
+  let deadIndex = Math.floor(Math.random() * array2.length);
+  let dead = array2[`${deadIndex}`];
+  if (array2.length == 1) {
+      temp = 0;
+      swal(`Coder ${array2[0]} is Win!`);
+      return
+  } else if (array2.length > 1) {
+      array2.splice(deadIndex, 1);
+      msj = `Coder ${dead} is Dead!`;
+    }
+
+  setTimeout(function () {
+    swal({
+      title: msj,
+      icon: "recursos/img/ducks/img-pato-parca.png",
+      buttons: "Cerrar",
+    });
+    killCoder();
+  }, temp);
+}
+
+function setlocalStorage() {
+  let coderKey = new Map();
+
+  for (let i = 0; i < nameCoders.length; i++) {
+      coderKey.set(i, nameCoders[i]);
+      localStorage.setItem(`${i}`, nameCoders[i]);
+  }
 }
